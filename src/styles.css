@@ -1,0 +1,105 @@
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  font-synthesis: none;
+  --cream: #f4ebdd;
+  --blue: #2035ed;
+  --coral: #f64b32;
+  --white: #fffcef;
+  --ink: #202324;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 240px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline-offset: 5px; }
+::selection { background: var(--blue); color: var(--cream); }
+
+.composition-host { width: 100%; position: relative; overflow: clip; }
+.portada { position: relative; width: 1440px; height: 800px; transform-origin: top left; isolation: isolate; background: var(--cream); }
+.grid { position: absolute; inset: 0; opacity: .13; pointer-events: none; }
+
+.navigation { position: absolute; left: 64px; top: 40px; width: 991px; height: 46px; z-index: 2; }
+.identity { position: absolute; left: 0; top: 0; width: 540px; height: 44px; margin: 0; padding-top: 1px; font-size: 16px; font-weight: 500; line-height: 22px; }
+.label { display: flex; align-items: center; justify-content: center; padding: 12px 16px; border: 0; border-radius: 4px; margin: 0; white-space: nowrap; font-size: 16px; font-weight: 500; line-height: 22px; color: var(--blue); background: var(--cream); }
+a.label { transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease; }
+a.label:hover { transform: translateY(-3px); color: var(--cream); background: var(--coral); box-shadow: 0 4px 0 rgba(32,35,36,.12); }
+a.label:active { transform: translateY(0); box-shadow: none; }
+.label-blue { color: var(--white); background: var(--blue); }
+/* Optical baseline correction for Figma's 16 px text renderer. */
+.navigation .label { padding-top: 13px; padding-bottom: 11px; }
+.nav-about { position: absolute; left: 572px; top: 0; width: 104px; height: 46px; }
+.nav-projects { position: absolute; left: 708px; top: 0; width: 121px; height: 46px; }
+.nav-contact { position: absolute; left: 861px; top: 0; width: 130px; height: 46px; }
+.professions { position: absolute; left: 711px; top: 191px; width: 702px; height: 46px; font-size: 24px; z-index: 2; }
+.desktop-ribbon-track { display: none; }
+
+@media (min-width: 901px) {
+  .professions { display: block; height: 54px; padding: 11px 0; overflow: hidden; border: 2px solid var(--ink); border-radius: 0; rotate: -3deg; box-shadow: 0 7px 0 var(--coral); }
+  .professions-static { display: none; }
+  .desktop-ribbon-track { display: flex; width: max-content; }
+  .desktop-ribbon-track span { flex: none; white-space: pre; font-size: 22px; font-weight: 700; line-height: 28px; letter-spacing: 1px; }
+  .portada[data-motion='off'] .desktop-ribbon-track { width: 100%; justify-content: center; }
+  .portada[data-motion='off'] .desktop-ribbon-track span { font-size: 17px; letter-spacing: 0; }
+  .portada[data-motion='off'] .desktop-ribbon-track span + span { display: none; }
+}
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .portada[data-motion='on'] .desktop-ribbon-track { animation: desktop-ribbon-scroll 22s linear infinite; }
+  .professions:hover .desktop-ribbon-track { animation-play-state: paused; }
+  @keyframes desktop-ribbon-scroll { to { transform: translateX(-50%); } }
+}
+
+.portfolio-title { margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 900; letter-spacing: 0; }
+.title-outline, .title-solid { position: absolute; display: block; white-space: nowrap; font-weight: 900; line-height: 1.18; }
+.title-outline { left: 88px; top: 282px; font-family: 'Unbounded', sans-serif; font-size: 194px; overflow: visible; }
+.title-solid { left: 36px; top: 372px; width: 1150px; height: 238px; padding-top: 1px; font-size: 202px; color: var(--blue); opacity: .8; }
+.folio-outline { position: absolute; left: 36px; top: 372px; font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 202px; overflow: visible; opacity: 0; }
+.porta-fill { opacity: 0; }
+.portfolio-title[data-style='swapped'] .porta-fill { opacity: .8; }
+.portfolio-title[data-style='swapped'] .porta-outline,
+.portfolio-title[data-style='swapped'] .title-solid { opacity: 0; }
+.portfolio-title[data-style='swapped'] .folio-outline { opacity: 1; }
+
+/* Figma rotates clockwise 7° about its original top-left corner (886, 220).
+   The visual axis-aligned left is 822.628; the unrotated source is 520 × 520. */
+.face-placement { position: absolute; left: 886px; top: 220px; width: 520px; height: 520px; transform: rotate(7deg); transform-origin: top left; z-index: 3; }
+.face { display: block; position: relative; width: 520px; height: 520px; padding: 0; border: 0; background: transparent; }
+.face-entrance, .face-tracking { width: 520px; height: 520px; }
+.face-frame { position: absolute; inset: 0; display: block; width: 520px; height: 520px; object-fit: contain; user-select: none; pointer-events: none; }
+
+.seal { position: absolute; left: 64px; top: 203px; width: 150px; height: 150px; z-index: 5; }
+.seal-entrance, .seal-reaction, .seal-hover { position: relative; width: 150px; height: 150px; }
+.seal-star { display: block; overflow: visible; filter: drop-shadow(5px 7px 7.15px rgba(0,0,0,.49)); }
+.seal-monogram { position: absolute; left: 60px; top: 1px; width: 120px; height: 106px; color: var(--cream); font-family: 'Dancing Script', cursive; font-size: 90px; font-weight: 700; line-height: 1.18; text-shadow: 5px 7px 14.3px rgba(0,0,0,.49); pointer-events: none; }
+
+/* One entrance, after fonts and both face frames are ready. Each animation ends
+   at the exact Figma placement; the face's finish starts the shared blink loop. */
+.portada[data-motion='on'][data-entrance='pending'] .intro-element { opacity: 0; }
+.portada[data-entrance='playing'] .grid { animation: portada-grid-enter 420ms linear both; }
+.portada[data-entrance='playing'] .navigation { animation: portada-text-enter 400ms cubic-bezier(.16,1,.3,1) 100ms both; }
+.portada[data-entrance='playing'] .portfolio-title { animation: portada-text-enter 500ms cubic-bezier(.16,1,.3,1) 280ms both; }
+.portada[data-entrance='playing'] .professions { animation: portada-text-enter 430ms cubic-bezier(.16,1,.3,1) 480ms both; }
+.portada[data-entrance='playing'] .seal-entrance { animation: portada-seal-enter 450ms cubic-bezier(.16,1,.3,1) 400ms both; }
+.portada[data-motion='on'][data-face-entry='waiting'] .face-entrance { opacity: 0; pointer-events: none; }
+.portada[data-entrance='playing'][data-face-entry='ready'] .face-entrance { animation: portada-face-enter 600ms cubic-bezier(.22,.61,.36,1) both; }
+
+@keyframes portada-grid-enter { from { opacity: 0; } to { opacity: .13; } }
+@keyframes portada-text-enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes portada-seal-enter { from { opacity: 0; transform: scale(.9) rotate(-8deg); } to { opacity: 1; transform: none; } }
+@keyframes portada-face-enter {
+  0% { opacity: 0; transform: translateY(24px) scale(.92) rotate(-5deg); }
+  65% { opacity: 1; transform: translateY(-6px) scale(1.02) rotate(1deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  a.label { transition: none; }
+  a.label:hover, a.label:active { transform: none; }
+  .portada .intro-element { animation: none; }
+}
+.portada[data-motion='off'] a.label { transition: none; }

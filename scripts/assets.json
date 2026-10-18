@@ -1,0 +1,412 @@
+{
+  "images": [
+    {
+      "legacySource": "Animaciones/1.1_CaraRegular.png",
+      "id": "animations/regular-open",
+      "designWidth": 520,
+      "original": "design-source/originals/animations/regular-open.png"
+    },
+    {
+      "legacySource": "Animaciones/1.3_CaraRegular.png",
+      "id": "animations/regular-blink",
+      "designWidth": 520,
+      "original": "design-source/originals/animations/regular-blink.png"
+    },
+    {
+      "legacySource": "Animaciones/5.2_CaraFelizNaranja.png",
+      "id": "animations/happy-orange-open",
+      "designWidth": 140,
+      "original": "design-source/originals/animations/happy-orange-open.png"
+    },
+    {
+      "legacySource": "Animaciones/5.1_CaraFelizNaranja.png",
+      "id": "animations/happy-orange-blink",
+      "designWidth": 140,
+      "original": "design-source/originals/animations/happy-orange-blink.png"
+    },
+    {
+      "legacySource": "Animaciones/2.1_CaraPensativa.png",
+      "id": "animations/thinking-open",
+      "designWidth": 182,
+      "original": "design-source/originals/animations/thinking-open.png"
+    },
+    {
+      "legacySource": "Animaciones/2.2_CaraPensativa.png",
+      "id": "animations/thinking-blink",
+      "designWidth": 182,
+      "original": "design-source/originals/animations/thinking-blink.png"
+    },
+    {
+      "legacySource": "Animaciones/3.1_CaraAsombro.png",
+      "id": "animations/surprised-open",
+      "designWidth": 152,
+      "original": "design-source/originals/animations/surprised-open.png"
+    },
+    {
+      "legacySource": "Animaciones/3.2_CaraAsombro.png",
+      "id": "animations/surprised-blink",
+      "designWidth": 152,
+      "original": "design-source/originals/animations/surprised-blink.png"
+    },
+    {
+      "legacySource": "Animaciones/6.1_CaraSeria.png",
+      "id": "animations/serious-open",
+      "designWidth": 349,
+      "original": "design-source/originals/animations/serious-open.png"
+    },
+    {
+      "legacySource": "Animaciones/6.2_CaraSeria.png",
+      "id": "animations/serious-blink",
+      "designWidth": 349,
+      "original": "design-source/originals/animations/serious-blink.png"
+    },
+    {
+      "legacySource": "Animaciones/7.1_parado.png",
+      "id": "animations/standing-open",
+      "designWidth": 630,
+      "original": "design-source/originals/animations/standing-open.png"
+    },
+    {
+      "legacySource": "Animaciones/7.3_parado.png",
+      "id": "animations/standing-blink",
+      "designWidth": 630,
+      "original": "design-source/originals/animations/standing-blink.png"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/MiFotoGiam.png",
+      "id": "sobre-mi/giam-photo",
+      "designWidth": 450,
+      "original": "design-source/originals/sobre-mi/giam-photo.png"
+    },
+    {
+      "legacySource": "src/assets/museo/capturaPC 1.png",
+      "id": "museo/museum-history",
+      "designWidth": 1294,
+      "original": "design-source/originals/museo/museum-history.png"
+    },
+    {
+      "legacySource": "src/assets/museo/capturaPC2 1.png",
+      "id": "museo/museum-home",
+      "designWidth": 813,
+      "original": "design-source/originals/museo/museum-home.png"
+    },
+    {
+      "legacySource": "src/assets/museo/Celular.png",
+      "id": "museo/museum-phone-gallery",
+      "designWidth": 317,
+      "original": "design-source/originals/museo/museum-phone-gallery.png"
+    },
+    {
+      "legacySource": "src/assets/museo/Celular-1.png",
+      "id": "museo/museum-phone-home",
+      "designWidth": 295,
+      "original": "design-source/originals/museo/museum-phone-home.png"
+    },
+    {
+      "legacySource": "src/assets/museo/labels/NextJS.png",
+      "id": "museo/labels/nextjs",
+      "designWidth": 54,
+      "original": "design-source/originals/museo/labels/nextjs.png"
+    },
+    {
+      "legacySource": "src/assets/museo/labels/React.png",
+      "id": "museo/labels/react",
+      "designWidth": 45,
+      "original": "design-source/originals/museo/labels/react.png"
+    },
+    {
+      "legacySource": "src/assets/museo/labels/TypeScript.png",
+      "id": "museo/labels/typescript",
+      "designWidth": 85,
+      "original": "design-source/originals/museo/labels/typescript.png"
+    },
+    {
+      "legacySource": "src/assets/museo/labels/Tailwind.png",
+      "id": "museo/labels/tailwind",
+      "designWidth": 63,
+      "original": "design-source/originals/museo/labels/tailwind.png"
+    },
+    {
+      "legacySource": "src/assets/personajes/07_llorando.png",
+      "id": "personajes/warrior-crying",
+      "designWidth": 336,
+      "original": "design-source/originals/personajes/warrior-crying.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/05_ataque_embestida 1.png",
+      "id": "personajes/angry",
+      "designWidth": 416.6,
+      "original": "design-source/originals/personajes/angry.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/05_ataque_golpe 1.png",
+      "id": "personajes/warrior-attack",
+      "designWidth": 339,
+      "original": "design-source/originals/personajes/warrior-attack.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/06_asustado 1.png",
+      "id": "personajes/surprised",
+      "designWidth": 425,
+      "original": "design-source/originals/personajes/surprised.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/07_llorando 1.png",
+      "id": "personajes/sad",
+      "designWidth": 318,
+      "original": "design-source/originals/personajes/sad.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/08_defensa 1.png",
+      "id": "personajes/warrior-defense",
+      "designWidth": 335,
+      "original": "design-source/originals/personajes/warrior-defense.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/10_victoria 1.png",
+      "id": "personajes/warrior-victory",
+      "designWidth": 604,
+      "original": "design-source/originals/personajes/warrior-victory.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/10_victoria 2.png",
+      "id": "personajes/happy",
+      "designWidth": 431.8,
+      "original": "design-source/originals/personajes/happy.png"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/image 2.png",
+      "id": "personajes/cloud",
+      "designWidth": 430,
+      "original": "design-source/originals/personajes/cloud.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/Image (LOGO UNISUCRE.png).png",
+      "id": "educa/logo-educa",
+      "designWidth": 300,
+      "original": "design-source/originals/educa/logo-educa.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/1598248-1920x1280-desktop-hd-sucre-bolivia-wallpaper-photo 1.png",
+      "id": "educa/panorama-sucre",
+      "designWidth": 1527,
+      "original": "design-source/originals/educa/panorama-sucre.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/1598313-2600x1733-desktop-hd-sucre-bolivia-wallpaper 1.png",
+      "id": "educa/church-sucre",
+      "designWidth": 440,
+      "original": "design-source/originals/educa/church-sucre.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/1598819-3072x2047-desktop-hd-sucre-bolivia-wallpaper 1.png",
+      "id": "educa/courtyard-sucre",
+      "designWidth": 439,
+      "original": "design-source/originals/educa/courtyard-sucre.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/1599802-1920x1282-desktop-hd-sucre-bolivia-background-photo 1.png",
+      "id": "educa/city-sucre",
+      "designWidth": 439,
+      "original": "design-source/originals/educa/city-sucre.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/Image (Group 7 (1).png).png",
+      "id": "educa/logo-construction",
+      "designWidth": 782,
+      "original": "design-source/originals/educa/logo-construction.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/image 8.png",
+      "id": "educa/u-night",
+      "designWidth": 311,
+      "original": "design-source/originals/educa/u-night.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/image 9.png",
+      "id": "educa/u-buildings",
+      "designWidth": 316,
+      "original": "design-source/originals/educa/u-buildings.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/image 10.png",
+      "id": "educa/u-monument",
+      "designWidth": 370,
+      "original": "design-source/originals/educa/u-monument.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/image 11.png",
+      "id": "educa/logo-black",
+      "designWidth": 229,
+      "original": "design-source/originals/educa/logo-black.png"
+    },
+    {
+      "legacySource": "src/assets/Educa/Group 11.png",
+      "id": "educa/logo-white",
+      "designWidth": 361,
+      "original": "design-source/originals/educa/logo-white.png"
+    },
+    {
+      "legacySource": "src/assets/Contacto/8.1_Caminando.png.png",
+      "id": "contacto/giam-walking",
+      "designWidth": 505,
+      "original": "design-source/originals/contacto/giam-walking.png"
+    }
+  ],
+  "vectors": [
+    {
+      "legacySource": "src/assets/sobre-mi/SeparadorPequeño.svg",
+      "output": "src/assets/shared/divider-wave-small.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/SeparadorNaranja.svg",
+      "output": "src/assets/shared/divider-wave-orange.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/SeparadorGrande.svg",
+      "output": "src/assets/shared/divider-wave-blue.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/python.svg",
+      "output": "src/assets/sobre-mi/icons/python.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/javascript.svg",
+      "output": "src/assets/sobre-mi/icons/javascript.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/git.svg",
+      "output": "src/assets/sobre-mi/icons/git.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/docker.svg",
+      "output": "src/assets/sobre-mi/icons/docker.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/SQL.svg",
+      "output": "src/assets/sobre-mi/icons/sql.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/PowerBI.svg",
+      "output": "src/assets/sobre-mi/icons/powerbi.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/Excel.svg",
+      "output": "src/assets/sobre-mi/icons/excel.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/Tableau.svg",
+      "output": "src/assets/sobre-mi/icons/tableau.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/figma.svg",
+      "output": "src/assets/sobre-mi/icons/figma.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/Illustrator.svg",
+      "output": "src/assets/sobre-mi/icons/illustrator.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/Photoshop.svg",
+      "output": "src/assets/sobre-mi/icons/photoshop.svg"
+    },
+    {
+      "legacySource": "src/assets/sobre-mi/After Effects.svg",
+      "output": "src/assets/sobre-mi/icons/after-effects.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/Group 1.svg",
+      "output": "src/assets/museo/palette-01.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/Group 2.svg",
+      "output": "src/assets/museo/palette-02.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/Group 3.svg",
+      "output": "src/assets/museo/palette-03.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/Group 4.svg",
+      "output": "src/assets/museo/palette-04.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/Next.js.svg",
+      "output": "src/assets/museo/icons/nextjs.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/Rect.svg",
+      "output": "src/assets/museo/icons/react.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/TypeScript.svg",
+      "output": "src/assets/museo/icons/typescript.svg"
+    },
+    {
+      "legacySource": "src/assets/museo/tailwind.svg",
+      "output": "src/assets/museo/icons/tailwind.svg"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/Trazos.svg",
+      "output": "src/assets/personajes/traces-emotions.svg"
+    },
+    {
+      "legacySource": "src/assets/Ilustracion_2D/Trazos2.svg",
+      "output": "src/assets/personajes/traces-warrior.svg"
+    },
+    {
+      "legacySource": "src/assets/Educa/SeparadorEduca.svg",
+      "output": "src/assets/educa/divider-wave.svg"
+    },
+    {
+      "legacySource": "src/assets/Contacto/Papel recortado.svg",
+      "output": "src/assets/contacto/divider-wave-orange.svg"
+    },
+    {
+      "legacySource": "src/assets/Contacto/Capa_1.svg",
+      "output": "src/assets/contacto/icons/whatsapp.svg"
+    },
+    {
+      "legacySource": "src/assets/Contacto/Layer_1.svg",
+      "output": "src/assets/contacto/icons/instagram.svg"
+    },
+    {
+      "legacySource": "src/assets/Contacto/Layer_1-1.svg",
+      "output": "src/assets/contacto/icons/email.svg"
+    },
+    {
+      "legacySource": "src/assets/Contacto/Frame.svg",
+      "output": "src/assets/contacto/icons/linkedin.svg"
+    }
+  ],
+  "references": [
+    {
+      "source": "PortadaPNG/Portada.png",
+      "output": "../FotosUsadasPort/references/portada.png"
+    },
+    {
+      "source": "SobreMiPNG/Sobre mí.png",
+      "output": "../FotosUsadasPort/references/sobre-mi.png"
+    },
+    {
+      "source": "MisProyectosPNG/Mis proyectos.png",
+      "output": "../FotosUsadasPort/references/mis-proyectos.png"
+    },
+    {
+      "source": "src/assets/museo/Museo La Niña de Quemes.png",
+      "output": "../FotosUsadasPort/references/museo.png"
+    },
+    {
+      "source": "src/assets/Ilustracion_2D/Personajes con personalidad.png",
+      "output": "../FotosUsadasPort/references/personajes.png"
+    },
+    {
+      "source": "src/assets/Educa/EDUCA · Identidad visual.png",
+      "output": "../FotosUsadasPort/references/educa.png"
+    },
+    {
+      "source": "src/assets/Contacto/Contacto.png",
+      "output": "../FotosUsadasPort/references/contacto.png"
+    }
+  ]
+}

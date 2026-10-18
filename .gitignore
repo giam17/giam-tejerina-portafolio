@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+!.env.example
+*.local
+*.tsbuildinfo
+work/
+design-source/references/
+design-source/unused/
+design-source/originals/
+*.log

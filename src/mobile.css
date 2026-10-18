@@ -1,0 +1,204 @@
+/* Desktop rules remain in the section stylesheets. These layouts only apply to phones. */
+.mobile-only { display: none; }
+.characters-artwork-group { display: contents; }
+
+@media (max-width: 900px) {
+  .mobile-only { display: block; }
+  :root { scroll-padding-top: 20px; }
+  .composition-host, .about-host, .projects-host, .museum-host, .characters-host, .educa-host, .contacto-host { height: auto !important; scroll-margin-top: 24px !important; }
+  .portada, .about-composition, .projects-composition, .museum-composition, .characters-composition, .educa-composition, .contacto-composition { width: 100%; height: auto; transform: none !important; scroll-margin-top: 24px !important; }
+  .about-paper-separator, .projects-separator { width: 100%; }
+  .about-paper-separator img, .projects-separator img, .characters-divider, .educa-divider, .contacto-divider { max-width: none; }
+
+  /* Cover: the original interlocking title, the same face and a useful navigation. */
+  .portada { display: flex; flex-direction: column; padding: 24px 24px 64px; }
+  .navigation { position: relative; left: auto; top: auto; width: 100%; height: auto; z-index: 5; order: 0; }
+  .identity { position: static; width: auto; height: auto; font-size: 12px; line-height: 18px; padding: 0; }
+  .navigation nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 20px; }
+  .navigation .label { position: static; width: auto; height: 44px; padding: 10px 4px; font-size: 10px; border-radius: 8px; }
+  .portfolio-title { position: relative; order: 1; margin: 44px 0 10px; height: calc(28.5vw - 13.7px); min-height: 86px; }
+  .title-outline { left: 0; top: 0; width: 100%; height: auto; }
+  .title-solid { left: 0; top: calc(7.69vw - 3.69px); width: 98.3%; height: auto; padding: 0; font-size: calc(17.56vw - 8.43px); line-height: 1.18; }
+  .folio-outline { left: 0; top: calc(7.69vw - 3.69px); width: 98.3%; height: auto; }
+  .face-placement { position: relative; left: auto; top: auto; order: 2; width: min(100%, 360px); height: auto; aspect-ratio: 1; margin: -8px auto 14px; transform-origin: center; }
+  .face, .face-entrance, .face-tracking { width: 100%; height: 100%; }
+  .face-frame { width: 100%; height: 100%; }
+  .professions { position: relative; left: auto; top: auto; order: 3; width: 100%; height: auto; padding: 14px 12px; border-radius: 10px; font-size: 11px; line-height: 1.7; white-space: normal; text-align: center; }
+  .seal { left: auto; right: -74px; top: 131px; transform: scale(.46); transform-origin: top left; z-index: 4; }
+
+  /* About: readable paper cards, a portrait and overlapping original stickers. */
+  .about-composition { display: flex; flex-direction: column; gap: 28px; padding: 68px 24px 104px; background-image: linear-gradient(rgb(246 75 50 / 12%) 2px, transparent 2px), linear-gradient(90deg, rgb(246 75 50 / 12%) 2px, transparent 2px); background-size: 36px 36px; }
+  .about-grid { display: none; }
+  .about-introduction { position: relative; left: auto; top: auto; width: 100%; height: auto; order: 0; }
+  .about-greeting { width: auto; height: auto; font-size: clamp(25px, 7.5vw, 48px); line-height: 1.15; margin-bottom: 20px !important; }
+  .about-bio { position: relative; left: auto; top: auto; width: 100%; height: auto; padding: 24px; border-radius: 22px; box-shadow: 6px 8px 0 rgb(0 0 0 / 16%); }
+  .about-bio p { font-size: 17px; line-height: 1.65; text-align: left; }
+  .about-bio p + p { margin-top: 20px; }
+  .about-happy { left: auto; right: -12px; top: -76px; width: 108px; height: 108px; }
+  .about-photo { position: relative; left: auto; top: auto; width: min(75vw, 320px); height: auto; aspect-ratio: 450 / 672; order: 1; align-self: center; border: 8px solid var(--cream); border-radius: 18px; box-shadow: 7px 9px 0 #d44e4b; transform: rotate(-3deg); }
+  .about-photo img { left: 0; top: -1px; width: 100%; height: auto; }
+  .about-thinking { position: relative; left: auto; top: auto; width: 120px; height: 120px; order: 2; align-self: flex-end; margin: -136px -10px -14px 0; z-index: 2; }
+  .about-tools, .about-experience, .about-education, .about-skills { position: relative; left: auto; top: auto; width: 100%; height: auto; padding: 24px; border-radius: 22px; }
+  .about-skills { order: 3; box-shadow: 7px 7px 0 var(--ink); }
+  .skills-content { position: static; width: auto; height: auto; gap: 14px; }
+  .skills-content h2 { height: auto; font-size: 38px; line-height: 1.2; }
+  .skills-content h3 { height: auto; font-size: 18px; line-height: 1.4; }
+  .skills-content p { height: auto; font-size: 16px; line-height: 1.6; }
+  .skills-content hr { width: 100%; margin: 4px 0; }
+  .skills-content .skills-languages { height: auto; font-size: 14px; line-height: 1.65; }
+  .about-tools { order: 4; box-shadow: 6px 8px 0 rgb(0 0 0 / 18%); }
+  .tools-content { position: static; width: auto; height: auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 6px; row-gap: 18px; }
+  .tools-content h2 { position: static; width: auto; grid-column: 1 / -1; font-size: clamp(19px, 5.5vw, 29px); }
+  .tools-rule { position: static; width: 100%; grid-column: 1 / -1; }
+  .tools-content .tools-category { position: static; grid-column: 1 / -1; font-size: 15px; line-height: 1.3; text-align: center; }
+  .tools-content .category-engineer { grid-row: 3; }
+  .tools-content .category-analyst { grid-row: 5; }
+  .tools-content .category-designer { grid-row: 7; }
+  .tools-list { display: contents; }
+  .tools-list li { position: static; width: auto; height: auto !important; min-width: 0; }
+  .tools-list li:nth-child(-n+4) { grid-row: 4; }
+  .tools-list li:nth-child(n+5):nth-child(-n+8) { grid-row: 6; }
+  .tools-list li:nth-child(n+9) { grid-row: 8; }
+  .tool-icon { position: relative; left: auto !important; top: auto !important; width: 44px !important; height: 44px !important; margin: 0 auto 8px; }
+  .tool-name { position: static; display: block; width: auto; font-size: 11px; line-height: 1.4; white-space: normal; }
+  .about-experience { order: 5; box-shadow: 6px 8px 0 rgb(0 0 0 / 18%); }
+  .experience-content { position: static; width: auto; height: auto; }
+  .experience-content h2 { position: static; width: auto; height: auto; font-size: clamp(20px, 6.3vw, 32px); text-align: left; margin-bottom: 24px; }
+  .experience-content p { position: static; width: auto; font-size: 16px; line-height: 1.5; }
+  .experience-content .experience-role { font-size: 17px; margin-top: 10px; }
+  .experience-content hr { position: static; width: 100%; margin: 20px 0; }
+  .about-education { order: 6; margin-top: 26px; box-shadow: 6px 8px 0 rgb(0 0 0 / 18%); }
+  .education-wave { left: 0; top: -17px; width: 100%; overflow: hidden; }
+  .education-wave img { width: 450px !important; height: 33px !important; transform: none !important; }
+  .education-content { position: static; width: auto; height: auto; }
+  .education-content h2 { position: static; font-size: 23px; line-height: 1.4; }
+  .education-content hr { position: static; width: 100%; margin: 18px 0; }
+  .career { position: static; width: auto; height: auto; margin: 18px 0; }
+  .career h3 { font-size: 16px; line-height: 1.4; white-space: normal; color: #d66a00; }
+  .career p { position: static; width: auto; margin-top: 8px; font-size: 16px; line-height: 1.6; white-space: normal; }
+  .courses-list { position: static; width: auto; height: auto; margin-top: 12px; font-size: 14px; line-height: 1.7; white-space: normal; }
+  .courses-list li { padding: 7px 0; }
+  .about-surprise { left: auto; right: -10px; top: -94px; width: 108px; height: 108px; }
+
+  /* Projects: numbered cards become direct, generous touch targets. */
+  .projects-composition { padding: 96px 24px 72px; background-image: linear-gradient(rgb(32 35 36 / 13%) 1px, transparent 1px), linear-gradient(90deg, rgb(32 35 36 / 13%) 1px, transparent 1px); background-size: 36px 36px; }
+  .projects-grid { display: none; }
+  .projects-content { position: relative; left: auto; top: auto; width: auto; height: auto; }
+  .projects-content h2 { position: static; width: auto; font-size: clamp(29px, 8.4vw, 57px); line-height: 1.12; }
+  .projects-categories { display: grid; gap: 16px; margin-top: 28px; }
+  .project-category { position: relative; left: auto; top: auto; width: 100%; height: auto; min-height: 118px; padding: 24px 24px 32px 96px; display: flex; align-items: center; background: var(--cream); color: var(--ink); border-radius: 20px; box-shadow: 5px 5px 0 #151515; }
+  .project-category-circle { left: 17px; top: 24px; width: 60px; height: 60px; }
+  .project-category-number { left: 7px; top: 6px; width: 80px; height: 96px; font-size: 48px; color: var(--cream); }
+  .project-category h3 { position: static; width: auto; font-size: 24px; line-height: 1.08; }
+  .mobile-project-link { position: absolute; inset: 0; border-radius: inherit; }
+  .mobile-project-link::after { content: 'VER PROYECTO ↗'; position: absolute; right: 18px; bottom: 12px; font-size: 10px; font-weight: 700; letter-spacing: .7px; color: var(--blue); }
+  .projects-serious { left: auto; right: 20px; top: -72px; width: 144px; height: 144px; }
+  .projects-standing { position: relative; left: auto; top: auto; width: min(88vw, 360px); height: auto; aspect-ratio: 1; margin: 28px auto -8px; }
+  .projects-standing-art { width: 100%; height: 100%; }
+
+  /* Museum: phones side by side, full-width screenshots and the existing lightbox. */
+  .museum-composition { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 64px 20px 80px; }
+  .museum-category { position: relative; left: auto; top: auto; width: auto; height: auto; grid-column: 1 / -1; order: 0; margin-top: -86px; padding: 16px 18px; border-radius: 18px; box-shadow: 5px 6px 0 rgb(0 0 0 / 20%); }
+  .museum-category span { position: static; font-size: 15px; line-height: 1.4; white-space: normal; }
+  #museum-title { position: static; width: auto; grid-column: 1 / -1; order: 1; font-size: clamp(29px, 8.8vw, 59px); line-height: 1.15; }
+  .museum-description { position: static; width: auto; grid-column: 1 / -1; order: 2; font-size: 17px; line-height: 1.65; text-align: left; }
+  .museum-description span { display: inline; white-space: normal; text-align-last: auto; }
+  .museum-description span:nth-child(4) { word-spacing: normal; }
+  .museum-capture { position: relative; left: auto !important; top: auto !important; width: 100% !important; height: auto !important; grid-column: 1 / -1; order: 4; }
+  .museum-phone { grid-column: auto; order: 3; }
+  .museum-capture-entry, .museum-capture-tracking { height: auto; }
+  .museum-capture-tracking img { width: 100%; height: auto; }
+  .museum-mobile-hint { grid-column: 1 / -1; order: 5; margin: -6px 0 0; font-size: 13px; color: var(--blue); text-align: center; }
+  .museum-palette { position: relative; inset: auto; grid-column: 1 / -1; order: 6; display: flex; margin-top: 8px; }
+  .museum-swatch { position: relative; left: auto !important; top: auto !important; width: 25%; height: auto; }
+  .museum-swatch img { width: 100%; height: auto; }
+  .museum-technologies { grid-column: 1 / -1; order: 7; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 18px 10px; border: 1px solid rgb(32 35 36 / 15%); border-radius: 18px; }
+  .museum-technology { position: static; width: auto !important; height: auto !important; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .museum-technology .museum-image { position: static; max-width: 100%; }
+  .museum-technology-icon { width: 44px; height: 44px; object-fit: contain; }
+  .museum-technology .museum-image:not(.museum-technology-icon) { width: auto; height: 15px; object-fit: contain; }
+
+  /* Characters: original drawings on paper, with touch controls beside each group. */
+  .characters-composition { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 52px 20px 124px; }
+  .characters-category { position: relative; left: auto; top: auto; width: auto; height: auto; padding: 16px 18px; margin-top: -78px; border-radius: 14px; box-shadow: 5px 6px 0 rgb(0 0 0 / 20%); z-index: 2; }
+  .characters-category span { position: static; display: block; font-size: 17px; line-height: 1.35; white-space: normal; }
+  .characters-category br { display: none; }
+  #characters-title { position: relative; left: auto; top: auto; width: auto; font-size: clamp(30px, 8.5vw, 57px); line-height: 1.16; letter-spacing: -.8px; }
+  .characters-description-panel { display: none; }
+  .characters-description { position: relative; left: auto; top: auto; width: auto; padding: 22px; border: 3px solid #645f5b; border-radius: 16px; background: white; font-size: 17px; line-height: 1.65; text-align: left; box-shadow: 5px 6px 0 rgb(43 0 74 / 24%); }
+  .characters-description span { display: inline; white-space: normal; text-align-last: auto; }
+  .characters-sketch-title { position: relative; left: auto; top: auto; width: auto; font-size: clamp(38px, 12vw, 76px); line-height: 1.15; margin: 12px 0 0; }
+  .characters-artwork-group { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 18px; border: 3px solid #645f5b; border-radius: 20px; background: white; box-shadow: 6px 8px 0 rgb(43 0 74 / 23%); }
+  .characters-artwork-group[data-panel='header'] { padding: 0; border: 0; background: transparent; box-shadow: none; }
+  .characters-panel { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; pointer-events: none; }
+  .characters-art.characters-figure { position: relative; left: auto !important; top: auto !important; width: 100% !important; height: auto !important; aspect-ratio: 1; z-index: 1; }
+  .characters-artwork-group:not([data-panel='header']) .characters-figure:last-of-type { grid-column: 1 / -1; width: 62% !important; justify-self: center; }
+  .characters-traces { inset: 0 !important; width: 100% !important; height: 100% !important; opacity: .55; z-index: 0; }
+  .characters-labels { position: relative; grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; z-index: 2; }
+  .characters-labels li { position: static; width: auto !important; height: 44px; border-radius: 9px; background: #eaf2ff; }
+  .characters-labels button { background: #eaf2ff; }
+  .characters-labels span { padding: 12px 2px; font-size: clamp(11px, 3vw, 13px); line-height: 20px; }
+  .characters-cloud { width: 65vw !important; height: auto !important; aspect-ratio: 430 / 242; }
+  .characters-cloud:nth-child(odd) { left: -18vw !important; }
+  .characters-cloud:nth-child(even) { left: 62vw !important; }
+  .characters-cloud:nth-child(1) { top: 3% !important; }
+  .characters-cloud:nth-child(2) { top: 15% !important; }
+  .characters-cloud:nth-child(3) { top: 28% !important; }
+  .characters-cloud:nth-child(4) { top: 43% !important; }
+  .characters-cloud:nth-child(5) { top: 57% !important; }
+  .characters-cloud:nth-child(6) { top: 67% !important; }
+  .characters-cloud:nth-child(7) { top: 79% !important; }
+  .characters-cloud:nth-child(8) { top: 91% !important; }
+
+  /* EDUCA: the same brand story, now as a vertical editorial gallery. */
+  .educa-composition { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; padding: 80px 20px 88px; }
+  .educa-category { position: relative; left: auto; top: auto; width: auto; height: auto; grid-column: 1 / -1; order: 0; margin-top: -112px; padding: 22px 20px; border-width: 2px; box-shadow: 6px 6px 0 var(--blue); }
+  .educa-category-label { position: relative; left: auto; top: auto; margin: 0 0 18px; font-size: 11px; line-height: 1.5; letter-spacing: 1px; }
+  #educa-title { position: relative; left: auto; top: auto; font-size: clamp(24px, 7.5vw, 42px); line-height: 1.15; letter-spacing: -.7px; word-spacing: 0; white-space: normal; }
+  .educa-category-ornament { width: 34px; height: 34px; right: 12px; top: 13px; }
+  .educa-subtitle { position: relative; left: auto; top: auto; width: auto; grid-column: 1 / -1; order: 1; margin-top: 12px; font-size: 18px; line-height: 1.5; white-space: normal; text-align: center; }
+  .educa-year { position: relative; left: auto; top: auto; width: auto; grid-column: 1 / -1; order: 2; justify-self: center; padding: 6px 16px; border-radius: 100px; background: var(--cream); font-size: 15px; line-height: 1.4; }
+  .educa-description, .educa-logo-description { position: relative; left: auto; top: auto; width: auto; grid-column: 1 / -1; font-size: 17px; line-height: 1.7; text-align: left; }
+  .educa-description { order: 3; }
+  .educa-description br { display: none; }
+  .educa-logo-description { order: 6; margin: 10px 0; }
+  .educa-art { position: relative; left: auto !important; top: auto !important; width: 100% !important; height: auto !important; grid-column: span 3; }
+  .educa-image { width: 100%; height: auto; }
+  .educa-panorama-tracking, .educa-photo-tracking, .educa-photo-zoom, .educa-letter-float, .educa-letter-zoom, .educa-mark-emphasis, .educa-reveal-clip { height: auto; }
+  .educa-reveal-logo { grid-column: 1 / -1; order: 4; width: min(60vw, 300px) !important; justify-self: center; margin: 12px 0; }
+  .educa-panorama { grid-column: 1 / -1; order: 5; border-radius: 16px; }
+  .educa-composition[data-motion='on'] .educa-panorama .educa-image { transform: scale(1.25); }
+  .educa-photo { order: 7; overflow: hidden; border-radius: 12px; }
+  .educa-photo[data-educa-slot='1:306'] { grid-column: 1 / -1; }
+  .educa-reveal-construction { grid-column: 1 / -1; order: 8; }
+  .educa-letter { grid-column: span 2; order: 9; align-self: end; margin: 16px 0; }
+  .educa-mark { order: 10; align-self: center; padding: 12px; border: 1px solid rgb(32 35 36 / 12%); border-radius: 14px; background: #fffcef; }
+
+  /* Contact: a character-led farewell and comfortable, wrapping contact rows. */
+  .contacto-composition { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 64px 24px 44px; }
+  #contacto-title { position: relative; left: auto; top: auto; width: auto; grid-column: 1 / -1; order: 0; font-size: clamp(38px, 12vw, 72px); line-height: 1.18; }
+  .contacto-farewell { position: relative; left: auto; top: auto; width: auto; order: 1; align-self: center; font-size: 18px; line-height: 1.4; }
+  .contacto-character { position: relative; left: auto; top: auto; width: 100%; height: auto; order: 2; align-self: center; }
+  .contacto-links { grid-column: 1 / -1; order: 3; display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+  .contacto-link { position: relative; left: auto !important; top: auto !important; width: 100% !important; height: auto !important; min-height: 64px; display: flex; align-items: center; gap: 14px; padding: 14px; border: 1px solid rgb(244 235 221 / 45%); border-radius: 14px; background: rgb(244 235 221 / 8%); }
+  .contacto-link img { width: 34px; height: 34px; flex-shrink: 0; object-fit: contain; }
+  .contacto-link-label { position: static; width: auto !important; min-width: 0; font-size: 14px; line-height: 1.5; white-space: normal; }
+  .contacto-link-text { white-space: normal; overflow-wrap: anywhere; }
+  .contacto-link:first-child .contacto-link-label { font-size: 17px; }
+}
+
+@media (max-width: 359px) {
+  .about-tools { padding: 16px; }
+  .tools-content { column-gap: 4px; }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .project-category:active .project-category-number { transform: rotate(-6deg); }
+  .project-category:active .project-category-circle { transform: scale(1.07); }
+  .contacto-composition[data-motion='on'] .contacto-link:active img { transform: scale(1.07) rotate(-5deg); }
+  .contacto-composition[data-motion='on'] .contacto-link:active .contacto-link-text::after { transform: scaleX(1); }
+  .contacto-composition[data-motion='on'][data-revealed='true'] #contacto-title:active .contacto-title-letter { animation: contacto-letter-wave 650ms ease-in-out var(--letter-delay) both; }
+  .contacto-composition[data-motion='on'][data-revealed='true'] #contacto-title[data-touch-wave='true'] .contacto-title-letter { animation: contacto-letter-wave 650ms ease-in-out var(--letter-delay) both; }
+  .about-composition[data-motion='on'] .about-sticker:active .about-sticker-art { animation: about-sticker-hop 550ms ease-out; }
+  .about-sticker[data-hopping='true'] .about-sticker-art { animation: about-sticker-hop 550ms ease-out; }
+}

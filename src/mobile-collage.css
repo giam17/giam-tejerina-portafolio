@@ -1,0 +1,103 @@
+/* Second mobile proposal. Every visual override is scoped below the desktop breakpoint. */
+@media (max-width: 900px) {
+  .portada { padding-top: 28px; padding-bottom: 54px; }
+  .identity { border-left: 4px solid var(--blue); padding-left: 10px; font-weight: 700; }
+  .navigation nav { gap: 8px; margin-top: 22px; }
+  .navigation .label { border: 1px solid var(--ink); border-radius: 100px; box-shadow: 2px 3px 0 var(--ink); }
+  .navigation .nav-contact { background: var(--coral); }
+  .portfolio-title { margin-top: 44px; rotate: -4deg; z-index: 4; }
+  .face-placement { margin-top: -12px; margin-bottom: 4px; }
+  .face-placement::before { content: ''; position: absolute; inset: 7%; border: 1px solid var(--coral); border-radius: 50%; background: repeating-radial-gradient(circle, transparent 0 28px, rgb(246 75 50 / 15%) 29px 30px); }
+  .seal { top: 141px; right: -67px; }
+  html[data-mobile-collage] .professions { display: none; }
+  .mobile-cover-footer { order: 4; margin: 12px -24px 0; }
+  .mobile-ticker { overflow: hidden; background: var(--blue); color: var(--cream); border-block: 2px solid var(--ink); padding: 15px 0; rotate: -3deg; box-shadow: 0 7px 0 var(--coral); }
+  .mobile-ticker-track { display: flex; width: max-content; }
+  .mobile-ticker-track span { flex: none; white-space: pre; font-size: 15px; font-weight: 700; letter-spacing: 1px; }
+  .mobile-explore { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 36px 24px 0; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+  .mobile-down { display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; width: 42px; height: 42px; flex-shrink: 0; font-size: 24px; }
+  .about-composition { gap: 38px; padding-inline: 28px; }
+  .about-greeting { font-size: clamp(30px, 9vw, 64px); letter-spacing: -1.5px; }
+  .about-bio { border-radius: 4px 28px 4px 28px; box-shadow: 7px 8px 0 var(--ink); }
+  .about-photo { border-radius: 3px; border-width: 12px; border-bottom-width: 42px; overflow: visible; margin-block: 10px; }
+  .about-photo::after { content: 'GIAM / DETRÁS DE LAS IDEAS'; position: absolute; bottom: -31px; left: 0; width: 100%; text-align: center; color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+  .about-skills, .about-tools, .about-experience, .about-education { border: 1px solid var(--ink); border-radius: 5px; }
+  .about-skills { rotate: -1.2deg; }
+  .about-tools { rotate: 1deg; }
+  .about-experience { rotate: -.8deg; }
+  .about-skills::before, .about-photo::before, .characters-artwork-group:not([data-panel='header'])::before { content: ''; position: absolute; width: 88px; height: 24px; top: -13px; left: calc(50% - 44px); background: #fffcefbd; border: 1px solid #20232420; rotate: -6deg; z-index: 5; pointer-events: none; }
+  .skills-content h2 { border-bottom: 3px solid var(--blue); padding-bottom: 12px; }
+  .projects-composition { padding-top: 112px; }
+  .projects-content h2 { font-size: clamp(30px, 10.3vw, 72px); letter-spacing: -1.5px; }
+  .projects-categories { gap: 26px; margin: 40px 0 0; }
+  .project-category { min-height: 146px; border: 2px solid var(--ink); border-radius: 4px 28px 4px 28px; box-shadow: 7px 8px 0 #101559; }
+  .project-category:nth-child(1) { rotate: -3deg; }
+  .project-category:nth-child(2) { rotate: 2deg; background: #ff9e22; }
+  .project-category:nth-child(3) { rotate: -2deg; background: #f7b7a4; }
+  .project-category h3 { font-size: clamp(22px, 6.5vw, 36px); }
+  .mobile-project-link::after { font-size: 10px; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+  .projects-standing { width: min(70vw, 300px); margin-top: 38px; }
+  .museum-category, .characters-category { border-radius: 3px; border: 2px solid var(--ink); rotate: -2deg; }
+  .museum-composition { row-gap: 30px; }
+  .museum-phone { rotate: -5deg; padding: 5px; }
+  .museum-phone + .museum-phone { rotate: 5deg; translate: 0 20px; }
+  .museum-capture:not(.museum-phone) { border: 7px solid white; border-bottom-width: 18px; box-shadow: 5px 7px 0 rgb(32 35 36 / 18%); rotate: -1deg; }
+  .museum-technologies { border: 0; border-radius: 0; background: white; }
+  .characters-artwork-group:not([data-panel='header']) { border-width: 2px; border-radius: 5px; margin-block: 16px; rotate: -1deg; }
+  .characters-artwork-group[data-panel='warrior'] { rotate: 1deg; }
+  .characters-description { border-radius: 4px 25px 4px 25px; border-width: 2px; }
+  .characters-labels li, .characters-labels button { border-radius: 100px; }
+  .educa-category { rotate: -2deg; border-radius: 4px 28px 4px 28px; }
+  .educa-photo { padding: 6px 6px 18px; border: 1px solid #20232430; border-radius: 2px; background: white; box-shadow: 4px 6px 0 #20232420; rotate: -2deg; }
+  .educa-photo[data-educa-slot='1:306'] { rotate: 2deg; }
+  .educa-panorama { border-radius: 0; aspect-ratio: 1440 / 515; }
+  .educa-panorama .educa-panorama-tracking { height: 100%; transform: none !important; }
+  .educa-panorama .educa-image { height: 100%; object-fit: cover; object-position: center; }
+  .educa-composition[data-motion='on'] .educa-panorama .educa-image { transform: none; }
+  .educa-letter { aspect-ratio: 0.8; }
+  .educa-letter .educa-letter-float, .educa-letter .educa-letter-zoom { height: 100%; }
+  .educa-letter .educa-letter-zoom { position: relative; overflow: hidden; }
+  .educa-letter .educa-image { height: 100%; object-fit: fill; }
+  /* The monument export has transparent padding: normalize its visible 618 × 778 bounds. */
+  .educa-letter[data-educa-slot='1:313'] .educa-image { position: absolute; width: 119.7411%; max-width: none; height: 144.9871%; left: -12.4595%; top: -44.9871%; }
+  .educa-mark { aspect-ratio: 1; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  .educa-mark .educa-mark-emphasis { height: 100%; display: flex; align-items: center; justify-content: center; }
+  .educa-mark .educa-image { width: 100%; height: 100%; object-fit: contain; }
+  /* Match the black symbol to the white symbol's visible height inside its square export. */
+  .educa-mark[data-educa-slot='1:314'] .educa-image { width: auto; height: 92.66%; max-width: 100%; }
+  .contacto-composition { padding-bottom: calc(112px + env(safe-area-inset-bottom)); }
+  .contacto-link { border-radius: 3px 20px 3px 20px; background: var(--cream); color: var(--blue); box-shadow: 4px 5px 0 #121fb3; }
+  .contacto-link:nth-child(even) { rotate: 1deg; }
+  .contacto-link:nth-child(odd) { rotate: -1deg; }
+  .contacto-link img { filter: brightness(0); }
+  .mobile-reading-progress { position: fixed; inset: 0 0 auto; height: 4px; background: var(--coral); z-index: 45; transform: scaleX(var(--read-progress, 0)); transform-origin: left; pointer-events: none; }
+  .mobile-dock { position: fixed; left: 50%; bottom: max(12px, env(safe-area-inset-bottom)); translate: -50% 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 2px; width: min(calc(100% - 24px), 420px); padding: 6px; border: 1px solid var(--ink); border-radius: 100px; background: var(--cream); color: var(--ink); box-shadow: 0 5px 0 #202324, 0 10px 30px #20232430; }
+  .mobile-dock a, .mobile-dock button { display: grid; place-items: center; min-height: 44px; padding: 0 9px; border-radius: 100px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+  .mobile-dock a[aria-current] { background: var(--blue); color: var(--cream); }
+  .mobile-dock button { border: 0; background: #e4dac9; color: var(--ink); min-width: 36px; cursor: pointer; }
+  .mobile-chapter { padding-left: 9px; font-size: 17px; font-weight: 700; }
+  .mobile-chapter small { font-size: 9px; opacity: .55; }
+  html:has(.museum-lightbox[open]) .mobile-dock { visibility: hidden; }
+  html[data-mobile-collage='still'] .mobile-ticker-track { width: auto; text-align: center; }
+  html[data-mobile-collage='still'] .mobile-ticker-track span { white-space: normal; font-size: 12px; padding-inline: 20px; }
+  html[data-mobile-collage='still'] .mobile-ticker-track span + span { display: none; }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+  html[data-mobile-collage='moving'] .mobile-ticker-track { animation: mobile-ribbon 22s linear infinite; }
+  html[data-mobile-collage='moving'] .mobile-ticker:hover .mobile-ticker-track { animation-play-state: paused; }
+  html[data-mobile-collage='moving'] .face-placement { animation: mobile-float 5s ease-in-out infinite; }
+  html[data-mobile-collage='moving'] .mobile-down { animation: mobile-nudge 1.8s ease-in-out infinite; }
+  html[data-mobile-collage='moving'] :is(.about-photo, .projects-serious, .museum-category, .characters-category, .educa-category) { translate: 0 var(--scroll-drift, 0px); rotate: var(--scroll-turn, -2deg); }
+  html[data-mobile-collage='moving'] :is(.project-category, .contacto-link) { transition: scale 220ms ease, box-shadow 220ms ease; }
+  html[data-mobile-collage='moving'] :is(.project-category, .contacto-link):active { scale: .97; box-shadow: 2px 3px 0 var(--ink); }
+  @keyframes mobile-ribbon { to { transform: translateX(-50%); } }
+  @keyframes mobile-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+  @keyframes mobile-nudge { 0%,100% { translate: 0 -3px; } 50% { translate: 0 4px; } }
+}
+
+@media (max-width: 359px) {
+  .mobile-dock a { padding-inline: 6px; font-size: 10px; }
+  .mobile-chapter { padding-left: 5px; font-size: 14px; }
+  .about-tools { padding-inline: 12px; }
+}

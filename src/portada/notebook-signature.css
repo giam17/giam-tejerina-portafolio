@@ -1,0 +1,35 @@
+.navigation .notebook-signature {
+  width: 520px;
+  height: auto;
+  padding: 0;
+  margin: -8px 0 0 -8px;
+  border: 0;
+  color: var(--coral);
+  transform: rotate(-2deg);
+  transform-origin: top left;
+}
+.notebook-signature svg { display: block; width: 100%; height: auto; overflow: visible; }
+.notebook-signature text { fill: currentColor; font-family: 'Sedgwick Ave Display', cursive; font-weight: 400; }
+.signature-byline { font-size: 38px; }
+.signature-marcos { font-size: 38px; }
+.signature-giam { font-size: 92px; stroke: currentColor; stroke-width: .7px; paint-order: stroke fill; }
+@media (max-width: 900px) {
+  .navigation .notebook-signature { position: relative; width: min(100%, 500px); height: auto; margin: -5px 0 0; }
+  .portada .seal { top: clamp(186px, calc(105px + (100vw - 48px) * .2963), 250px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .portada[data-motion='on'][data-entrance='pending'] .signature-line-mask,
+  .portada[data-motion='on'][data-entrance='pending'] .signature-name-mask { width: 0; }
+  .portada[data-motion='on'][data-entrance='pending'] :is(.signature-strike-one, .signature-strike-two, .signature-flourish, .signature-correction, .signature-spark) { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-line-mask { animation: signature-write-line .47s linear .03s both; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-name-mask { animation: signature-write-name .19s cubic-bezier(.3,.1,.65,1) .68s both; }
+  .portada[data-motion='on']:not([data-entrance='pending']) :is(.signature-strike-one, .signature-strike-two, .signature-flourish, .signature-correction, .signature-spark) { stroke-dasharray: 1; animation: signature-draw .08s ease-out both; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-strike-one { animation-delay: .54s; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-strike-two { animation-delay: .59s; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-correction { animation-delay: .65s; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-flourish { animation-delay: .85s; animation-duration: .09s; }
+  .portada[data-motion='on']:not([data-entrance='pending']) .signature-spark { animation-delay: .92s; }
+}
+@keyframes signature-write-line { from { width: 0; } to { width: 490px; } }
+@keyframes signature-write-name { from { width: 0; } to { width: 255px; } }
+@keyframes signature-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }

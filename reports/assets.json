@@ -1,0 +1,1501 @@
+{
+  "originalBytes": 115775185,
+  "defaultBytes": 18791104,
+  "reductionPercent": 83.76931636947936,
+  "images": [
+    {
+      "id": "animations/regular-open",
+      "original": "design-source/originals/animations/regular-open.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1189774,
+      "defaultBytes": 562240,
+      "defaultFile": "src/assets/animations/regular-open.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image0_260",
+          "width": 260,
+          "file": "src/assets/animations/regular-open-260w.webp",
+          "bytes": 54836
+        },
+        {
+          "name": "image0_520",
+          "width": 520,
+          "file": "src/assets/animations/regular-open-520w.webp",
+          "bytes": 174040
+        },
+        {
+          "name": "image0_1040",
+          "width": 1040,
+          "file": "src/assets/animations/regular-open.webp",
+          "bytes": 562240
+        },
+        {
+          "name": "image0_1254",
+          "width": 1254,
+          "file": "src/assets/animations/regular-open-1254w.webp",
+          "bytes": 740358
+        }
+      ]
+    },
+    {
+      "id": "animations/regular-blink",
+      "original": "design-source/originals/animations/regular-blink.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1158077,
+      "defaultBytes": 586008,
+      "defaultFile": "src/assets/animations/regular-blink.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image1_260",
+          "width": 260,
+          "file": "src/assets/animations/regular-blink-260w.webp",
+          "bytes": 56120
+        },
+        {
+          "name": "image1_520",
+          "width": 520,
+          "file": "src/assets/animations/regular-blink-520w.webp",
+          "bytes": 175186
+        },
+        {
+          "name": "image1_1040",
+          "width": 1040,
+          "file": "src/assets/animations/regular-blink.webp",
+          "bytes": 586008
+        },
+        {
+          "name": "image1_1254",
+          "width": 1254,
+          "file": "src/assets/animations/regular-blink-1254w.webp",
+          "bytes": 772594
+        }
+      ]
+    },
+    {
+      "id": "animations/happy-orange-open",
+      "original": "design-source/originals/animations/happy-orange-open.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1139689,
+      "defaultBytes": 61372,
+      "defaultFile": "src/assets/animations/happy-orange-open.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image2_70",
+          "width": 70,
+          "file": "src/assets/animations/happy-orange-open-70w.webp",
+          "bytes": 7656
+        },
+        {
+          "name": "image2_140",
+          "width": 140,
+          "file": "src/assets/animations/happy-orange-open-140w.webp",
+          "bytes": 22782
+        },
+        {
+          "name": "image2_280",
+          "width": 280,
+          "file": "src/assets/animations/happy-orange-open.webp",
+          "bytes": 61372
+        },
+        {
+          "name": "image2_1254",
+          "width": 1254,
+          "file": "src/assets/animations/happy-orange-open-1254w.webp",
+          "bytes": 740234
+        }
+      ]
+    },
+    {
+      "id": "animations/happy-orange-blink",
+      "original": "design-source/originals/animations/happy-orange-blink.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1140033,
+      "defaultBytes": 57986,
+      "defaultFile": "src/assets/animations/happy-orange-blink.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image3_70",
+          "width": 70,
+          "file": "src/assets/animations/happy-orange-blink-70w.webp",
+          "bytes": 7170
+        },
+        {
+          "name": "image3_140",
+          "width": 140,
+          "file": "src/assets/animations/happy-orange-blink-140w.webp",
+          "bytes": 20954
+        },
+        {
+          "name": "image3_280",
+          "width": 280,
+          "file": "src/assets/animations/happy-orange-blink.webp",
+          "bytes": 57986
+        },
+        {
+          "name": "image3_1254",
+          "width": 1254,
+          "file": "src/assets/animations/happy-orange-blink-1254w.webp",
+          "bytes": 721776
+        }
+      ]
+    },
+    {
+      "id": "animations/thinking-open",
+      "original": "design-source/originals/animations/thinking-open.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1272759,
+      "defaultBytes": 105490,
+      "defaultFile": "src/assets/animations/thinking-open.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image4_91",
+          "width": 91,
+          "file": "src/assets/animations/thinking-open-91w.webp",
+          "bytes": 12644
+        },
+        {
+          "name": "image4_182",
+          "width": 182,
+          "file": "src/assets/animations/thinking-open-182w.webp",
+          "bytes": 37726
+        },
+        {
+          "name": "image4_364",
+          "width": 364,
+          "file": "src/assets/animations/thinking-open.webp",
+          "bytes": 105490
+        },
+        {
+          "name": "image4_1254",
+          "width": 1254,
+          "file": "src/assets/animations/thinking-open-1254w.webp",
+          "bytes": 833006
+        }
+      ]
+    },
+    {
+      "id": "animations/thinking-blink",
+      "original": "design-source/originals/animations/thinking-blink.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1238712,
+      "defaultBytes": 109280,
+      "defaultFile": "src/assets/animations/thinking-blink.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image5_91",
+          "width": 91,
+          "file": "src/assets/animations/thinking-blink-91w.webp",
+          "bytes": 13138
+        },
+        {
+          "name": "image5_182",
+          "width": 182,
+          "file": "src/assets/animations/thinking-blink-182w.webp",
+          "bytes": 38926
+        },
+        {
+          "name": "image5_364",
+          "width": 364,
+          "file": "src/assets/animations/thinking-blink.webp",
+          "bytes": 109280
+        },
+        {
+          "name": "image5_1254",
+          "width": 1254,
+          "file": "src/assets/animations/thinking-blink-1254w.webp",
+          "bytes": 857780
+        }
+      ]
+    },
+    {
+      "id": "animations/surprised-open",
+      "original": "design-source/originals/animations/surprised-open.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1104303,
+      "defaultBytes": 67104,
+      "defaultFile": "src/assets/animations/surprised-open.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image6_76",
+          "width": 76,
+          "file": "src/assets/animations/surprised-open-76w.webp",
+          "bytes": 8332
+        },
+        {
+          "name": "image6_152",
+          "width": 152,
+          "file": "src/assets/animations/surprised-open-152w.webp",
+          "bytes": 24478
+        },
+        {
+          "name": "image6_304",
+          "width": 304,
+          "file": "src/assets/animations/surprised-open.webp",
+          "bytes": 67104
+        },
+        {
+          "name": "image6_1254",
+          "width": 1254,
+          "file": "src/assets/animations/surprised-open-1254w.webp",
+          "bytes": 730728
+        }
+      ]
+    },
+    {
+      "id": "animations/surprised-blink",
+      "original": "design-source/originals/animations/surprised-blink.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1137791,
+      "defaultBytes": 68614,
+      "defaultFile": "src/assets/animations/surprised-blink.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image7_76",
+          "width": 76,
+          "file": "src/assets/animations/surprised-blink-76w.webp",
+          "bytes": 8656
+        },
+        {
+          "name": "image7_152",
+          "width": 152,
+          "file": "src/assets/animations/surprised-blink-152w.webp",
+          "bytes": 25448
+        },
+        {
+          "name": "image7_304",
+          "width": 304,
+          "file": "src/assets/animations/surprised-blink.webp",
+          "bytes": 68614
+        },
+        {
+          "name": "image7_1254",
+          "width": 1254,
+          "file": "src/assets/animations/surprised-blink-1254w.webp",
+          "bytes": 751386
+        }
+      ]
+    },
+    {
+      "id": "animations/serious-open",
+      "original": "design-source/originals/animations/serious-open.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1159312,
+      "defaultBytes": 295864,
+      "defaultFile": "src/assets/animations/serious-open.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image8_175",
+          "width": 175,
+          "file": "src/assets/animations/serious-open-175w.webp",
+          "bytes": 35734
+        },
+        {
+          "name": "image8_349",
+          "width": 349,
+          "file": "src/assets/animations/serious-open-349w.webp",
+          "bytes": 92068
+        },
+        {
+          "name": "image8_698",
+          "width": 698,
+          "file": "src/assets/animations/serious-open.webp",
+          "bytes": 295864
+        },
+        {
+          "name": "image8_1254",
+          "width": 1254,
+          "file": "src/assets/animations/serious-open-1254w.webp",
+          "bytes": 785936
+        }
+      ]
+    },
+    {
+      "id": "animations/serious-blink",
+      "original": "design-source/originals/animations/serious-blink.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1160093,
+      "defaultBytes": 301706,
+      "defaultFile": "src/assets/animations/serious-blink.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image9_175",
+          "width": 175,
+          "file": "src/assets/animations/serious-blink-175w.webp",
+          "bytes": 35126
+        },
+        {
+          "name": "image9_349",
+          "width": 349,
+          "file": "src/assets/animations/serious-blink-349w.webp",
+          "bytes": 95068
+        },
+        {
+          "name": "image9_698",
+          "width": 698,
+          "file": "src/assets/animations/serious-blink.webp",
+          "bytes": 301706
+        },
+        {
+          "name": "image9_1254",
+          "width": 1254,
+          "file": "src/assets/animations/serious-blink-1254w.webp",
+          "bytes": 793890
+        }
+      ]
+    },
+    {
+      "id": "animations/standing-open",
+      "original": "design-source/originals/animations/standing-open.png",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "originalBytes": 947252,
+      "defaultBytes": 667178,
+      "defaultFile": "src/assets/animations/standing-open.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image10_315",
+          "width": 315,
+          "file": "src/assets/animations/standing-open-315w.webp",
+          "bytes": 96882
+        },
+        {
+          "name": "image10_630",
+          "width": 630,
+          "file": "src/assets/animations/standing-open-630w.webp",
+          "bytes": 254760
+        },
+        {
+          "name": "image10_1122",
+          "width": 1122,
+          "file": "src/assets/animations/standing-open.webp",
+          "bytes": 667178
+        }
+      ]
+    },
+    {
+      "id": "animations/standing-blink",
+      "original": "design-source/originals/animations/standing-blink.png",
+      "originalWidth": 1086,
+      "originalHeight": 1448,
+      "originalBytes": 1000160,
+      "defaultBytes": 709168,
+      "defaultFile": "src/assets/animations/standing-blink.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image11_315",
+          "width": 315,
+          "file": "src/assets/animations/standing-blink-315w.webp",
+          "bytes": 103768
+        },
+        {
+          "name": "image11_630",
+          "width": 630,
+          "file": "src/assets/animations/standing-blink-630w.webp",
+          "bytes": 287450
+        },
+        {
+          "name": "image11_1086",
+          "width": 1086,
+          "file": "src/assets/animations/standing-blink.webp",
+          "bytes": 709168
+        }
+      ]
+    },
+    {
+      "id": "sobre-mi/giam-photo",
+      "original": "design-source/originals/sobre-mi/giam-photo.png",
+      "originalWidth": 800,
+      "originalHeight": 1280,
+      "originalBytes": 1238781,
+      "defaultBytes": 750328,
+      "defaultFile": "src/assets/sobre-mi/giam-photo.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image12_225",
+          "width": 225,
+          "file": "src/assets/sobre-mi/giam-photo-225w.webp",
+          "bytes": 70636
+        },
+        {
+          "name": "image12_450",
+          "width": 450,
+          "file": "src/assets/sobre-mi/giam-photo-450w.webp",
+          "bytes": 257428
+        },
+        {
+          "name": "image12_800",
+          "width": 800,
+          "file": "src/assets/sobre-mi/giam-photo.webp",
+          "bytes": 750328
+        }
+      ]
+    },
+    {
+      "id": "museo/museum-history",
+      "original": "design-source/originals/museo/museum-history.png",
+      "originalWidth": 6470,
+      "originalHeight": 3140,
+      "originalBytes": 9501149,
+      "defaultBytes": 1599694,
+      "defaultFile": "src/assets/museo/museum-history.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image13_647",
+          "width": 647,
+          "file": "src/assets/museo/museum-history-647w.webp",
+          "bytes": 98746
+        },
+        {
+          "name": "image13_1294",
+          "width": 1294,
+          "file": "src/assets/museo/museum-history-1294w.webp",
+          "bytes": 396700
+        },
+        {
+          "name": "image13_2588",
+          "width": 2588,
+          "file": "src/assets/museo/museum-history.webp",
+          "bytes": 1599694
+        },
+        {
+          "name": "image13_6470",
+          "width": 6470,
+          "file": "src/assets/museo/museum-history-6470w.webp",
+          "bytes": 6688454
+        }
+      ]
+    },
+    {
+      "id": "museo/museum-home",
+      "original": "design-source/originals/museo/museum-home.png",
+      "originalWidth": 4065,
+      "originalHeight": 2065,
+      "originalBytes": 5804104,
+      "defaultBytes": 885180,
+      "defaultFile": "src/assets/museo/museum-home.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image14_407",
+          "width": 407,
+          "file": "src/assets/museo/museum-home-407w.webp",
+          "bytes": 58628
+        },
+        {
+          "name": "image14_813",
+          "width": 813,
+          "file": "src/assets/museo/museum-home-813w.webp",
+          "bytes": 219476
+        },
+        {
+          "name": "image14_1626",
+          "width": 1626,
+          "file": "src/assets/museo/museum-home.webp",
+          "bytes": 885180
+        },
+        {
+          "name": "image14_4065",
+          "width": 4065,
+          "file": "src/assets/museo/museum-home-4065w.webp",
+          "bytes": 4144782
+        }
+      ]
+    },
+    {
+      "id": "museo/museum-phone-gallery",
+      "original": "design-source/originals/museo/museum-phone-gallery.png",
+      "originalWidth": 1585,
+      "originalHeight": 3120,
+      "originalBytes": 3466693,
+      "defaultBytes": 534204,
+      "defaultFile": "src/assets/museo/museum-phone-gallery.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image15_159",
+          "width": 159,
+          "file": "src/assets/museo/museum-phone-gallery-159w.webp",
+          "bytes": 39364
+        },
+        {
+          "name": "image15_317",
+          "width": 317,
+          "file": "src/assets/museo/museum-phone-gallery-317w.webp",
+          "bytes": 139538
+        },
+        {
+          "name": "image15_634",
+          "width": 634,
+          "file": "src/assets/museo/museum-phone-gallery.webp",
+          "bytes": 534204
+        },
+        {
+          "name": "image15_1585",
+          "width": 1585,
+          "file": "src/assets/museo/museum-phone-gallery-1585w.webp",
+          "bytes": 2164542
+        }
+      ]
+    },
+    {
+      "id": "museo/museum-phone-home",
+      "original": "design-source/originals/museo/museum-phone-home.png",
+      "originalWidth": 1475,
+      "originalHeight": 3110,
+      "originalBytes": 3656400,
+      "defaultBytes": 431110,
+      "defaultFile": "src/assets/museo/museum-phone-home.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image16_148",
+          "width": 148,
+          "file": "src/assets/museo/museum-phone-home-148w.webp",
+          "bytes": 33400
+        },
+        {
+          "name": "image16_295",
+          "width": 295,
+          "file": "src/assets/museo/museum-phone-home-295w.webp",
+          "bytes": 116542
+        },
+        {
+          "name": "image16_590",
+          "width": 590,
+          "file": "src/assets/museo/museum-phone-home.webp",
+          "bytes": 431110
+        },
+        {
+          "name": "image16_1475",
+          "width": 1475,
+          "file": "src/assets/museo/museum-phone-home-1475w.webp",
+          "bytes": 2208800
+        }
+      ]
+    },
+    {
+      "id": "museo/labels/nextjs",
+      "original": "design-source/originals/museo/labels/nextjs.png",
+      "originalWidth": 270,
+      "originalHeight": 110,
+      "originalBytes": 3966,
+      "defaultBytes": 2184,
+      "defaultFile": "src/assets/museo/labels/nextjs.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image17_27",
+          "width": 27,
+          "file": "src/assets/museo/labels/nextjs-27w.webp",
+          "bytes": 430
+        },
+        {
+          "name": "image17_54",
+          "width": 54,
+          "file": "src/assets/museo/labels/nextjs-54w.webp",
+          "bytes": 1054
+        },
+        {
+          "name": "image17_108",
+          "width": 108,
+          "file": "src/assets/museo/labels/nextjs.webp",
+          "bytes": 2184
+        },
+        {
+          "name": "image17_270",
+          "width": 270,
+          "file": "src/assets/museo/labels/nextjs-270w.webp",
+          "bytes": 1508
+        }
+      ]
+    },
+    {
+      "id": "museo/labels/react",
+      "original": "design-source/originals/museo/labels/react.png",
+      "originalWidth": 225,
+      "originalHeight": 110,
+      "originalBytes": 3353,
+      "defaultBytes": 1890,
+      "defaultFile": "src/assets/museo/labels/react.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image18_23",
+          "width": 23,
+          "file": "src/assets/museo/labels/react-23w.webp",
+          "bytes": 372
+        },
+        {
+          "name": "image18_45",
+          "width": 45,
+          "file": "src/assets/museo/labels/react-45w.webp",
+          "bytes": 886
+        },
+        {
+          "name": "image18_90",
+          "width": 90,
+          "file": "src/assets/museo/labels/react.webp",
+          "bytes": 1890
+        },
+        {
+          "name": "image18_225",
+          "width": 225,
+          "file": "src/assets/museo/labels/react-225w.webp",
+          "bytes": 1240
+        }
+      ]
+    },
+    {
+      "id": "museo/labels/typescript",
+      "original": "design-source/originals/museo/labels/typescript.png",
+      "originalWidth": 425,
+      "originalHeight": 110,
+      "originalBytes": 5448,
+      "defaultBytes": 3178,
+      "defaultFile": "src/assets/museo/labels/typescript.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image19_43",
+          "width": 43,
+          "file": "src/assets/museo/labels/typescript-43w.webp",
+          "bytes": 626
+        },
+        {
+          "name": "image19_85",
+          "width": 85,
+          "file": "src/assets/museo/labels/typescript-85w.webp",
+          "bytes": 1554
+        },
+        {
+          "name": "image19_170",
+          "width": 170,
+          "file": "src/assets/museo/labels/typescript.webp",
+          "bytes": 3178
+        },
+        {
+          "name": "image19_425",
+          "width": 425,
+          "file": "src/assets/museo/labels/typescript-425w.webp",
+          "bytes": 2034
+        }
+      ]
+    },
+    {
+      "id": "museo/labels/tailwind",
+      "original": "design-source/originals/museo/labels/tailwind.png",
+      "originalWidth": 315,
+      "originalHeight": 110,
+      "originalBytes": 3723,
+      "defaultBytes": 2268,
+      "defaultFile": "src/assets/museo/labels/tailwind.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image20_32",
+          "width": 32,
+          "file": "src/assets/museo/labels/tailwind-32w.webp",
+          "bytes": 512
+        },
+        {
+          "name": "image20_63",
+          "width": 63,
+          "file": "src/assets/museo/labels/tailwind-63w.webp",
+          "bytes": 1140
+        },
+        {
+          "name": "image20_126",
+          "width": 126,
+          "file": "src/assets/museo/labels/tailwind.webp",
+          "bytes": 2268
+        },
+        {
+          "name": "image20_315",
+          "width": 315,
+          "file": "src/assets/museo/labels/tailwind-315w.webp",
+          "bytes": 1510
+        }
+      ]
+    },
+    {
+      "id": "personajes/warrior-crying",
+      "original": "design-source/originals/personajes/warrior-crying.png",
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "originalBytes": 1773975,
+      "defaultBytes": 346186,
+      "defaultFile": "src/assets/personajes/warrior-crying.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image21_168",
+          "width": 168,
+          "file": "src/assets/personajes/warrior-crying-168w.webp",
+          "bytes": 26034
+        },
+        {
+          "name": "image21_336",
+          "width": 336,
+          "file": "src/assets/personajes/warrior-crying-336w.webp",
+          "bytes": 87868
+        },
+        {
+          "name": "image21_672",
+          "width": 672,
+          "file": "src/assets/personajes/warrior-crying.webp",
+          "bytes": 346186
+        },
+        {
+          "name": "image21_1254",
+          "width": 1254,
+          "file": "src/assets/personajes/warrior-crying-1254w.webp",
+          "bytes": 1193630
+        }
+      ]
+    },
+    {
+      "id": "personajes/angry",
+      "original": "design-source/originals/personajes/angry.png",
+      "originalWidth": 2083,
+      "originalHeight": 2083,
+      "originalBytes": 2453390,
+      "defaultBytes": 298738,
+      "defaultFile": "src/assets/personajes/angry.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image22_209",
+          "width": 209,
+          "file": "src/assets/personajes/angry-209w.webp",
+          "bytes": 22146
+        },
+        {
+          "name": "image22_417",
+          "width": 417,
+          "file": "src/assets/personajes/angry-417w.webp",
+          "bytes": 77294
+        },
+        {
+          "name": "image22_834",
+          "width": 834,
+          "file": "src/assets/personajes/angry.webp",
+          "bytes": 298738
+        },
+        {
+          "name": "image22_2083",
+          "width": 2083,
+          "file": "src/assets/personajes/angry-2083w.webp",
+          "bytes": 1574510
+        }
+      ]
+    },
+    {
+      "id": "personajes/warrior-attack",
+      "original": "design-source/originals/personajes/warrior-attack.png",
+      "originalWidth": 1695,
+      "originalHeight": 1695,
+      "originalBytes": 2729787,
+      "defaultBytes": 335314,
+      "defaultFile": "src/assets/personajes/warrior-attack.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image23_170",
+          "width": 170,
+          "file": "src/assets/personajes/warrior-attack-170w.webp",
+          "bytes": 25436
+        },
+        {
+          "name": "image23_339",
+          "width": 339,
+          "file": "src/assets/personajes/warrior-attack-339w.webp",
+          "bytes": 86272
+        },
+        {
+          "name": "image23_678",
+          "width": 678,
+          "file": "src/assets/personajes/warrior-attack.webp",
+          "bytes": 335314
+        },
+        {
+          "name": "image23_1695",
+          "width": 1695,
+          "file": "src/assets/personajes/warrior-attack-1695w.webp",
+          "bytes": 1915102
+        }
+      ]
+    },
+    {
+      "id": "personajes/surprised",
+      "original": "design-source/originals/personajes/surprised.png",
+      "originalWidth": 2125,
+      "originalHeight": 2125,
+      "originalBytes": 3708675,
+      "defaultBytes": 501084,
+      "defaultFile": "src/assets/personajes/surprised.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image24_213",
+          "width": 213,
+          "file": "src/assets/personajes/surprised-213w.webp",
+          "bytes": 33528
+        },
+        {
+          "name": "image24_425",
+          "width": 425,
+          "file": "src/assets/personajes/surprised-425w.webp",
+          "bytes": 125318
+        },
+        {
+          "name": "image24_850",
+          "width": 850,
+          "file": "src/assets/personajes/surprised.webp",
+          "bytes": 501084
+        },
+        {
+          "name": "image24_2125",
+          "width": 2125,
+          "file": "src/assets/personajes/surprised-2125w.webp",
+          "bytes": 2442606
+        }
+      ]
+    },
+    {
+      "id": "personajes/sad",
+      "original": "design-source/originals/personajes/sad.png",
+      "originalWidth": 1590,
+      "originalHeight": 1590,
+      "originalBytes": 2073047,
+      "defaultBytes": 253314,
+      "defaultFile": "src/assets/personajes/sad.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image25_159",
+          "width": 159,
+          "file": "src/assets/personajes/sad-159w.webp",
+          "bytes": 18186
+        },
+        {
+          "name": "image25_318",
+          "width": 318,
+          "file": "src/assets/personajes/sad-318w.webp",
+          "bytes": 65458
+        },
+        {
+          "name": "image25_636",
+          "width": 636,
+          "file": "src/assets/personajes/sad.webp",
+          "bytes": 253314
+        },
+        {
+          "name": "image25_1590",
+          "width": 1590,
+          "file": "src/assets/personajes/sad-1590w.webp",
+          "bytes": 1352966
+        }
+      ]
+    },
+    {
+      "id": "personajes/warrior-defense",
+      "original": "design-source/originals/personajes/warrior-defense.png",
+      "originalWidth": 1675,
+      "originalHeight": 1675,
+      "originalBytes": 2938861,
+      "defaultBytes": 346508,
+      "defaultFile": "src/assets/personajes/warrior-defense.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image26_168",
+          "width": 168,
+          "file": "src/assets/personajes/warrior-defense-168w.webp",
+          "bytes": 25034
+        },
+        {
+          "name": "image26_335",
+          "width": 335,
+          "file": "src/assets/personajes/warrior-defense-335w.webp",
+          "bytes": 86022
+        },
+        {
+          "name": "image26_670",
+          "width": 670,
+          "file": "src/assets/personajes/warrior-defense.webp",
+          "bytes": 346508
+        },
+        {
+          "name": "image26_1675",
+          "width": 1675,
+          "file": "src/assets/personajes/warrior-defense-1675w.webp",
+          "bytes": 2020696
+        }
+      ]
+    },
+    {
+      "id": "personajes/warrior-victory",
+      "original": "design-source/originals/personajes/warrior-victory.png",
+      "originalWidth": 3020,
+      "originalHeight": 3020,
+      "originalBytes": 7638336,
+      "defaultBytes": 1119098,
+      "defaultFile": "src/assets/personajes/warrior-victory.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image27_302",
+          "width": 302,
+          "file": "src/assets/personajes/warrior-victory-302w.webp",
+          "bytes": 73952
+        },
+        {
+          "name": "image27_604",
+          "width": 604,
+          "file": "src/assets/personajes/warrior-victory-604w.webp",
+          "bytes": 282656
+        },
+        {
+          "name": "image27_1208",
+          "width": 1208,
+          "file": "src/assets/personajes/warrior-victory.webp",
+          "bytes": 1119098
+        },
+        {
+          "name": "image27_3020",
+          "width": 3020,
+          "file": "src/assets/personajes/warrior-victory-3020w.webp",
+          "bytes": 5210372
+        }
+      ]
+    },
+    {
+      "id": "personajes/happy",
+      "original": "design-source/originals/personajes/happy.png",
+      "originalWidth": 2159,
+      "originalHeight": 2159,
+      "originalBytes": 2273313,
+      "defaultBytes": 278586,
+      "defaultFile": "src/assets/personajes/happy.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image28_216",
+          "width": 216,
+          "file": "src/assets/personajes/happy-216w.webp",
+          "bytes": 20884
+        },
+        {
+          "name": "image28_432",
+          "width": 432,
+          "file": "src/assets/personajes/happy-432w.webp",
+          "bytes": 73884
+        },
+        {
+          "name": "image28_864",
+          "width": 864,
+          "file": "src/assets/personajes/happy.webp",
+          "bytes": 278586
+        },
+        {
+          "name": "image28_2159",
+          "width": 2159,
+          "file": "src/assets/personajes/happy-2159w.webp",
+          "bytes": 1488400
+        }
+      ]
+    },
+    {
+      "id": "personajes/cloud",
+      "original": "design-source/originals/personajes/cloud.png",
+      "originalWidth": 2150,
+      "originalHeight": 1210,
+      "originalBytes": 1464545,
+      "defaultBytes": 192410,
+      "defaultFile": "src/assets/personajes/cloud.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image29_215",
+          "width": 215,
+          "file": "src/assets/personajes/cloud-215w.webp",
+          "bytes": 13822
+        },
+        {
+          "name": "image29_430",
+          "width": 430,
+          "file": "src/assets/personajes/cloud-430w.webp",
+          "bytes": 48232
+        },
+        {
+          "name": "image29_860",
+          "width": 860,
+          "file": "src/assets/personajes/cloud.webp",
+          "bytes": 192410
+        },
+        {
+          "name": "image29_2150",
+          "width": 2150,
+          "file": "src/assets/personajes/cloud-2150w.webp",
+          "bytes": 998886
+        }
+      ]
+    },
+    {
+      "id": "educa/logo-educa",
+      "original": "design-source/originals/educa/logo-educa.png",
+      "originalWidth": 1500,
+      "originalHeight": 1500,
+      "originalBytes": 100941,
+      "defaultBytes": 12474,
+      "defaultFile": "src/assets/educa/logo-educa.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image30_150",
+          "width": 150,
+          "file": "src/assets/educa/logo-educa-150w.webp",
+          "bytes": 2944
+        },
+        {
+          "name": "image30_300",
+          "width": 300,
+          "file": "src/assets/educa/logo-educa-300w.webp",
+          "bytes": 5882
+        },
+        {
+          "name": "image30_600",
+          "width": 600,
+          "file": "src/assets/educa/logo-educa.webp",
+          "bytes": 12474
+        },
+        {
+          "name": "image30_1500",
+          "width": 1500,
+          "file": "src/assets/educa/logo-educa-1500w.webp",
+          "bytes": 40076
+        }
+      ]
+    },
+    {
+      "id": "educa/panorama-sucre",
+      "original": "design-source/originals/educa/panorama-sucre.png",
+      "originalWidth": 7200,
+      "originalHeight": 2575,
+      "originalBytes": 23184419,
+      "defaultBytes": 3604886,
+      "defaultFile": "src/assets/educa/panorama-sucre.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image31_764",
+          "width": 764,
+          "file": "src/assets/educa/panorama-sucre-764w.webp",
+          "bytes": 325546
+        },
+        {
+          "name": "image31_1527",
+          "width": 1527,
+          "file": "src/assets/educa/panorama-sucre-1527w.webp",
+          "bytes": 1141938
+        },
+        {
+          "name": "image31_3054",
+          "width": 3054,
+          "file": "src/assets/educa/panorama-sucre.webp",
+          "bytes": 3604886
+        },
+        {
+          "name": "image31_7200",
+          "width": 7200,
+          "file": "src/assets/educa/panorama-sucre-7200w.webp",
+          "bytes": 14109632
+        }
+      ]
+    },
+    {
+      "id": "educa/church-sucre",
+      "original": "design-source/originals/educa/church-sucre.png",
+      "originalWidth": 2200,
+      "originalHeight": 1465,
+      "originalBytes": 4305658,
+      "defaultBytes": 536522,
+      "defaultFile": "src/assets/educa/church-sucre.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image32_220",
+          "width": 220,
+          "file": "src/assets/educa/church-sucre-220w.webp",
+          "bytes": 38234
+        },
+        {
+          "name": "image32_440",
+          "width": 440,
+          "file": "src/assets/educa/church-sucre-440w.webp",
+          "bytes": 142906
+        },
+        {
+          "name": "image32_880",
+          "width": 880,
+          "file": "src/assets/educa/church-sucre.webp",
+          "bytes": 536522
+        },
+        {
+          "name": "image32_2200",
+          "width": 2200,
+          "file": "src/assets/educa/church-sucre-2200w.webp",
+          "bytes": 2667640
+        }
+      ]
+    },
+    {
+      "id": "educa/courtyard-sucre",
+      "original": "design-source/originals/educa/courtyard-sucre.png",
+      "originalWidth": 2195,
+      "originalHeight": 1465,
+      "originalBytes": 4328171,
+      "defaultBytes": 529460,
+      "defaultFile": "src/assets/educa/courtyard-sucre.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image33_220",
+          "width": 220,
+          "file": "src/assets/educa/courtyard-sucre-220w.webp",
+          "bytes": 41920
+        },
+        {
+          "name": "image33_439",
+          "width": 439,
+          "file": "src/assets/educa/courtyard-sucre-439w.webp",
+          "bytes": 143962
+        },
+        {
+          "name": "image33_878",
+          "width": 878,
+          "file": "src/assets/educa/courtyard-sucre.webp",
+          "bytes": 529460
+        },
+        {
+          "name": "image33_2195",
+          "width": 2195,
+          "file": "src/assets/educa/courtyard-sucre-2195w.webp",
+          "bytes": 2737760
+        }
+      ]
+    },
+    {
+      "id": "educa/city-sucre",
+      "original": "design-source/originals/educa/city-sucre.png",
+      "originalWidth": 2195,
+      "originalHeight": 1465,
+      "originalBytes": 5731098,
+      "defaultBytes": 684370,
+      "defaultFile": "src/assets/educa/city-sucre.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image34_220",
+          "width": 220,
+          "file": "src/assets/educa/city-sucre-220w.webp",
+          "bytes": 53668
+        },
+        {
+          "name": "image34_439",
+          "width": 439,
+          "file": "src/assets/educa/city-sucre-439w.webp",
+          "bytes": 193128
+        },
+        {
+          "name": "image34_878",
+          "width": 878,
+          "file": "src/assets/educa/city-sucre.webp",
+          "bytes": 684370
+        },
+        {
+          "name": "image34_2195",
+          "width": 2195,
+          "file": "src/assets/educa/city-sucre-2195w.webp",
+          "bytes": 3493308
+        }
+      ]
+    },
+    {
+      "id": "educa/logo-construction",
+      "original": "design-source/originals/educa/logo-construction.png",
+      "originalWidth": 3910,
+      "originalHeight": 3910,
+      "originalBytes": 722320,
+      "defaultBytes": 113946,
+      "defaultFile": "src/assets/educa/logo-construction.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image35_391",
+          "width": 391,
+          "file": "src/assets/educa/logo-construction-391w.webp",
+          "bytes": 21322
+        },
+        {
+          "name": "image35_782",
+          "width": 782,
+          "file": "src/assets/educa/logo-construction-782w.webp",
+          "bytes": 47364
+        },
+        {
+          "name": "image35_1564",
+          "width": 1564,
+          "file": "src/assets/educa/logo-construction.webp",
+          "bytes": 113946
+        },
+        {
+          "name": "image35_3910",
+          "width": 3910,
+          "file": "src/assets/educa/logo-construction-3910w.webp",
+          "bytes": 378676
+        }
+      ]
+    },
+    {
+      "id": "educa/u-night",
+      "original": "design-source/originals/educa/u-night.png",
+      "originalWidth": 1555,
+      "originalHeight": 1960,
+      "originalBytes": 2271424,
+      "defaultBytes": 301918,
+      "defaultFile": "src/assets/educa/u-night.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image36_156",
+          "width": 156,
+          "file": "src/assets/educa/u-night-156w.webp",
+          "bytes": 25094
+        },
+        {
+          "name": "image36_311",
+          "width": 311,
+          "file": "src/assets/educa/u-night-311w.webp",
+          "bytes": 84516
+        },
+        {
+          "name": "image36_622",
+          "width": 622,
+          "file": "src/assets/educa/u-night.webp",
+          "bytes": 301918
+        },
+        {
+          "name": "image36_1555",
+          "width": 1555,
+          "file": "src/assets/educa/u-night-1555w.webp",
+          "bytes": 1437238
+        }
+      ]
+    },
+    {
+      "id": "educa/u-buildings",
+      "original": "design-source/originals/educa/u-buildings.png",
+      "originalWidth": 1580,
+      "originalHeight": 1960,
+      "originalBytes": 2971205,
+      "defaultBytes": 390202,
+      "defaultFile": "src/assets/educa/u-buildings.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image37_158",
+          "width": 158,
+          "file": "src/assets/educa/u-buildings-158w.webp",
+          "bytes": 33240
+        },
+        {
+          "name": "image37_316",
+          "width": 316,
+          "file": "src/assets/educa/u-buildings-316w.webp",
+          "bytes": 110768
+        },
+        {
+          "name": "image37_632",
+          "width": 632,
+          "file": "src/assets/educa/u-buildings.webp",
+          "bytes": 390202
+        },
+        {
+          "name": "image37_1580",
+          "width": 1580,
+          "file": "src/assets/educa/u-buildings-1580w.webp",
+          "bytes": 1852392
+        }
+      ]
+    },
+    {
+      "id": "educa/u-monument",
+      "original": "design-source/originals/educa/u-monument.png",
+      "originalWidth": 1850,
+      "originalHeight": 2820,
+      "originalBytes": 3266985,
+      "defaultBytes": 435442,
+      "defaultFile": "src/assets/educa/u-monument.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image38_185",
+          "width": 185,
+          "file": "src/assets/educa/u-monument-185w.webp",
+          "bytes": 40674
+        },
+        {
+          "name": "image38_370",
+          "width": 370,
+          "file": "src/assets/educa/u-monument-370w.webp",
+          "bytes": 129952
+        },
+        {
+          "name": "image38_740",
+          "width": 740,
+          "file": "src/assets/educa/u-monument.webp",
+          "bytes": 435442
+        },
+        {
+          "name": "image38_1850",
+          "width": 1850,
+          "file": "src/assets/educa/u-monument-1850w.webp",
+          "bytes": 1975142
+        }
+      ]
+    },
+    {
+      "id": "educa/logo-black",
+      "original": "design-source/originals/educa/logo-black.png",
+      "originalWidth": 1145,
+      "originalHeight": 1650,
+      "originalBytes": 115047,
+      "defaultBytes": 14984,
+      "defaultFile": "src/assets/educa/logo-black.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image39_115",
+          "width": 115,
+          "file": "src/assets/educa/logo-black-115w.webp",
+          "bytes": 3378
+        },
+        {
+          "name": "image39_229",
+          "width": 229,
+          "file": "src/assets/educa/logo-black-229w.webp",
+          "bytes": 6886
+        },
+        {
+          "name": "image39_458",
+          "width": 458,
+          "file": "src/assets/educa/logo-black.webp",
+          "bytes": 14984
+        },
+        {
+          "name": "image39_1145",
+          "width": 1145,
+          "file": "src/assets/educa/logo-black-1145w.webp",
+          "bytes": 51600
+        }
+      ]
+    },
+    {
+      "id": "educa/logo-white",
+      "original": "design-source/originals/educa/logo-white.png",
+      "originalWidth": 1805,
+      "originalHeight": 1805,
+      "originalBytes": 156304,
+      "defaultBytes": 19310,
+      "defaultFile": "src/assets/educa/logo-white.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image40_181",
+          "width": 181,
+          "file": "src/assets/educa/logo-white-181w.webp",
+          "bytes": 4890
+        },
+        {
+          "name": "image40_361",
+          "width": 361,
+          "file": "src/assets/educa/logo-white-361w.webp",
+          "bytes": 9764
+        },
+        {
+          "name": "image40_722",
+          "width": 722,
+          "file": "src/assets/educa/logo-white.webp",
+          "bytes": 19310
+        },
+        {
+          "name": "image40_1805",
+          "width": 1805,
+          "file": "src/assets/educa/logo-white-1805w.webp",
+          "bytes": 64338
+        }
+      ]
+    },
+    {
+      "id": "contacto/giam-walking",
+      "original": "design-source/originals/contacto/giam-walking.png",
+      "originalWidth": 2525,
+      "originalHeight": 3140,
+      "originalBytes": 4236112,
+      "defaultBytes": 674306,
+      "defaultFile": "src/assets/contacto/giam-walking.webp",
+      "losslessVerified": true,
+      "candidates": [
+        {
+          "name": "image41_253",
+          "width": 253,
+          "file": "src/assets/contacto/giam-walking-253w.webp",
+          "bytes": 74402
+        },
+        {
+          "name": "image41_505",
+          "width": 505,
+          "file": "src/assets/contacto/giam-walking-505w.webp",
+          "bytes": 207058
+        },
+        {
+          "name": "image41_1010",
+          "width": 1010,
+          "file": "src/assets/contacto/giam-walking.webp",
+          "bytes": 674306
+        },
+        {
+          "name": "image41_2525",
+          "width": 2525,
+          "file": "src/assets/contacto/giam-walking-2525w.webp",
+          "bytes": 2789664
+        }
+      ]
+    }
+  ]
+}
