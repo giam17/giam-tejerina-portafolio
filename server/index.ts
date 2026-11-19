@@ -33,6 +33,7 @@ const pool = new Pool({
 pool.on('error', () => console.error('Se perdió una conexión inactiva con PostgreSQL.'))
 
 const app = createApp(pool, process.env.STATS_ADMIN_PASSWORD)
+if (process.env.API_TRUST_PROXY === 'true') app.set('trust proxy', 1)
 
 const port = Number(process.env.API_PORT ?? 3001)
 const host = process.env.API_HOST ?? '127.0.0.1'

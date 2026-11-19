@@ -62,9 +62,29 @@ docker stop portfolio-test-db
 
 Espera a que `pg_isready` indique que acepta conexiones antes de correr las dos suites que usan la base. `TEST_DATABASE_URL` solo acepta una base local llamada `portfolio_test`. La contraseña del ejemplo es exclusiva del contenedor temporal.
 
-## Vercel
+## Portafolio en Docker
 
-Importar el proyecto con la configuración **Vite**, comando de compilación `npm run build` y directorio de salida `dist`. No se requieren variables de entorno. El repositorio está preparado para desplegarse; no se ha realizado ningún despliegue.
+`Dockerfile` compila React y lo sirve con Nginx. `Dockerfile.api` compila Express y arranca el servidor con Node. Compose los conecta. Nginx envía `/api/` al backend y el backend consulta Supabase mediante TLS.
+
+Con el `.env` local configurado, ejecuta:
+
+```powershell
+docker compose up -d --build --wait
+docker compose ps
+```
+
+Abre `http://127.0.0.1:8080`. El puerto de Express queda dentro de la red de Compose. `PORTFOLIO_PORT` permite cambiar el puerto local. `docker compose down` detiene el conjunto.
+
+Cada `push` a `main` activa `.github/workflows/publicar-docker.yml`. El workflow construye para `linux/amd64` y publica `giam17/giam-tejerina-portafolio-web` y `giam17/giam-tejerina-portafolio-api` con el SHA completo del commit. Usa los secretos `DOCKERHUB_USERNAME` y `DOCKERHUB_TOKEN`. La conexión de Supabase y la contraseña de estadísticas se inyectan al arrancar los contenedores.
+
+Para levantar una versión publicada, asigna su SHA completo a `IMAGE_TAG` en la terminal y ejecuta:
+
+```powershell
+docker compose pull
+docker compose up -d --no-build --wait
+```
+
+Los despliegues automáticos de Vercel están desactivados en vercel.json para concentrar el flujo en Docker Hub y OCI.
 
 ## Imágenes y organización
 
@@ -81,7 +101,7 @@ npm run build
 
 El proceso genera WebP sin pérdida, variantes para diferentes densidades de pantalla y un catálogo de rutas. Comprueba los píxeles visibles y el canal alfa de las copias a resolución completa. El navegador selecciona el tamaño adecuado mediante `srcset`; las imágenes fuera de la primera vista se cargan al acercarse a ellas. La composición de escritorio conserva el diseño original.
 
-La configuración está en `scripts/assets.json`; el informe de pesos y variantes, en `reports/assets.json`. No es necesario regenerarlas para cada compilación ni instalar herramientas de imágenes en Vercel.
+La configuración está en `scripts/assets.json`; el informe de pesos y variantes, en `reports/assets.json`. No es necesario regenerarlas para cada compilación.
 
 ## Versión móvil
 

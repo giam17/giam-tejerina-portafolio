@@ -6,6 +6,7 @@ import { analyticsRouter } from './analytics.js'
 export function createApp(pool: Pool, statsPassword: string | undefined) {
   const app = express()
   app.disable('x-powered-by')
+  app.get('/api/health', (_request, response) => response.sendStatus(204))
   app.use('/api', analyticsRouter(pool, statsPassword))
 
   app.get('/api/projects', async (_request, response) => {
