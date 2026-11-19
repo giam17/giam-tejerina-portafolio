@@ -11,3 +11,8 @@ design-source/references/
 design-source/unused/
 design-source/originals/
 *.log
+dist-server/
+supabase/.temp/
+supabase/.branches/
+playwright-report/
+test-results/

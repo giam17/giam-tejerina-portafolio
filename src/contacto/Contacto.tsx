@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { useReducedMotion } from 'motion/react'
+import { recordEvent } from '../analytics/recordEvent'
 import { decodeImages, responsiveImage } from '../assets/images'
 import personaje from '../assets/contacto/giam-walking.webp'
 import separador from '../assets/contacto/divider-wave-orange.svg'
@@ -10,11 +11,11 @@ import linkedin from '../assets/contacto/icons/linkedin.svg'
 import './contacto.css'
 
 const contacts = [
-  { node: '1:329', textNode: '1:325', name: 'WhatsApp', text: '+591 67949446', href: 'https://wa.me/59167949446', icon: whatsapp, x: 944, y: 170, width: 55, height: 55, textY: 187, textWidth: 317 },
-  { node: '1:332', textNode: '1:326', name: 'Instagram', text: 'giam_tejerina', href: 'https://www.instagram.com/giam_tejerina/', icon: instagram, x: 944, y: 265, width: 54, height: 54, textY: 281, textWidth: 317 },
-  { node: '1:338', textNode: '1:327', name: 'Correo electrónico', text: 'tejerinalucass4@gmail.com', href: 'mailto:tejerinalucass4@gmail.com', icon: correo, x: 938, y: 359, width: 65, height: 65, textY: 378, textWidth: 317 },
-  { node: '1:341', textNode: '1:328', name: 'LinkedIn', text: 'www.linkedin.com/in/giamtejerina', href: 'https://www.linkedin.com/in/giamtejerina', icon: linkedin, x: 934, y: 451, width: 74, height: 74, textY: 477, textWidth: 391 },
-]
+  { target: 'whatsapp', node: '1:329', textNode: '1:325', name: 'WhatsApp', text: '+591 67949446', href: 'https://wa.me/59167949446', icon: whatsapp, x: 944, y: 170, width: 55, height: 55, textY: 187, textWidth: 317 },
+  { target: 'instagram', node: '1:332', textNode: '1:326', name: 'Instagram', text: 'giam_tejerina', href: 'https://www.instagram.com/giam_tejerina/', icon: instagram, x: 944, y: 265, width: 54, height: 54, textY: 281, textWidth: 317 },
+  { target: 'email', node: '1:338', textNode: '1:327', name: 'Correo electrónico', text: 'tejerinalucass4@gmail.com', href: 'mailto:tejerinalucass4@gmail.com', icon: correo, x: 938, y: 359, width: 65, height: 65, textY: 378, textWidth: 317 },
+  { target: 'linkedin', node: '1:341', textNode: '1:328', name: 'LinkedIn', text: 'www.linkedin.com/in/giamtejerina', href: 'https://www.linkedin.com/in/giamtejerina', icon: linkedin, x: 934, y: 451, width: 74, height: 74, textY: 477, textWidth: 391 },
+] as const
 
 function WaveTitle() {
   const base = useRef<HTMLSpanElement>(null)
@@ -122,7 +123,7 @@ export function Contacto() {
       <WaveTitle />
       <p className="contacto-farewell" data-figma-node="1:324" data-contacto-enter style={{ '--enter-delay': '140ms' } as CSSProperties}>Fin del recorrido<span className="contacto-dots">{[0, 1, 2].map(index => <span key={index} style={{ '--dot-delay': `${index * 250}ms` } as CSSProperties}>.</span>)}</span><br />por ahora.</p>
       <address className="contacto-links" aria-label="Vías de contacto de Giam Tejerina">
-        {contacts.map((contact, index) => <a key={contact.node} className="contacto-link" data-contacto-enter href={contact.href} target={contact.href.startsWith('https:') ? '_blank' : undefined} rel={contact.href.startsWith('https:') ? 'noopener noreferrer' : undefined} aria-label={`${contact.name}: ${contact.text}`} style={{ left: contact.x, top: contact.y, width: 1410 - contact.x, height: contact.height, '--enter-delay': `${280 + index * 90}ms` } as CSSProperties}>
+        {contacts.map((contact, index) => <a key={contact.node} onClick={() => recordEvent({ kind: 'contact_click', target: contact.target })} className="contacto-link" data-contacto-enter href={contact.href} target={contact.href.startsWith('https:') ? '_blank' : undefined} rel={contact.href.startsWith('https:') ? 'noopener noreferrer' : undefined} aria-label={`${contact.name}: ${contact.text}`} style={{ left: contact.x, top: contact.y, width: 1410 - contact.x, height: contact.height, '--enter-delay': `${280 + index * 90}ms` } as CSSProperties}>
           <img src={contact.icon} width={contact.width} height={contact.height} alt="" aria-hidden="true" data-figma-node={contact.node} />
           <span className="contacto-link-label" data-figma-node={contact.textNode} style={{ left: 1019 - contact.x, top: contact.textY - contact.y, width: contact.textWidth }}><span className="contacto-link-text">{contact.text}</span></span>
         </a>)}
