@@ -85,6 +85,29 @@
       community.general.ufw:
         state: enabled
 
+    # La imagen de OCI instala un rechazo general antes de las cadenas de UFW.
+    - name: Detectar el rechazo general de la imagen de OCI
+      ansible.builtin.command: iptables -C INPUT -j REJECT --reject-with icmp-host-prohibited
+      register: oci_input_reject
+      changed_when: false
+      failed_when: oci_input_reject.rc not in [0, 1]
+
+    - name: Dejar que UFW aplique la política de entrada
+      ansible.builtin.command: iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited
+      when: oci_input_reject.rc == 0
+
+    - name: Detectar reglas IPv4 persistentes de OCI
+      ansible.builtin.stat:
+        path: /etc/iptables/rules.v4
+      register: oci_ipv4_rules
+
+    - name: Retirar el rechazo general del archivo de arranque
+      ansible.builtin.lineinfile:
+        path: /etc/iptables/rules.v4
+        regexp: '^-A INPUT -j REJECT --reject-with icmp-host-prohibited$'
+        state: absent
+      when: oci_ipv4_rules.stat.exists
+
     - name: Verificar reglas iptables para HTTP y HTTPS
       ansible.builtin.command: "iptables -C ufw-user-input -p tcp --dport {{ item }} -j ACCEPT"
       loop: ['80', '443']
