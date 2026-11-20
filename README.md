@@ -24,7 +24,7 @@ Copia `.env.example` a `.env`. Completa `DATABASE_URL` con la conexión de Postg
 
 Instala las dependencias con `npm ci`. Ejecuta `npm run dev:api` y `npm run dev` en dos terminales desde la raíz.
 
-El frontend usa `/api/projects` a través del proxy de Vite. Usa `npm run build:api` para compilar Express y `npm run start:api` para ejecutar la compilación. Para comprobar el catálogo, cambia el título de un proyecto publicado en `portfolio.projects` y vuelve a cargar «Mis proyectos».
+El frontend usa `/api/projects` a través del proxy de Vite. El título y la descripción del catálogo alimentan los nombres y descripciones accesibles de los enlaces móviles de «Mis proyectos». Usa `npm run build:api` para compilar Express y `npm run start:api` para ejecutar la compilación. Puedes consultar `/api/projects` para ver los datos del catálogo.
 
 En el proyecto alojado de Giam, el esquema inicial se aplicó desde el editor SQL. La migración puede volver a ejecutarse con la CLI para registrarla en su historial sin duplicar filas ni reemplazar títulos editados.
 
@@ -44,7 +44,7 @@ La ejecución de GitHub Actions para cada `push` y pull request a `dev` corre tr
 
 - `npm run test:unit` valida los eventos de visita y clic.
 - `npm run test:integration` comprueba el catálogo, el registro sin duplicados y las estadísticas por día de Bolivia.
-- `npm run test:e2e` compila React y usa Chromium para recorrer el catálogo, registrar un clic y verificar el acceso privado.
+- `npm run test:e2e` compila React y usa Chromium para comprobar los enlaces de proyectos, registrar un clic y verificar el acceso privado.
 
 Para ejecutar las tres suites localmente, instala dependencias con `npm ci`. Desde PowerShell, instala Chromium en `work/`, levanta una base desechable y corre las pruebas:
 

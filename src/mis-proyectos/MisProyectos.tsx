@@ -6,12 +6,17 @@ import seriousAlternate from '../assets/animations/serious-blink.webp'
 import standingOpen from '../assets/animations/standing-open.webp'
 import standingAlternate from '../assets/animations/standing-blink.webp'
 import separator from '../assets/shared/divider-wave-blue.svg'
+import { useProjects } from './useProjects'
 import './mis-proyectos.css'
 
 const seriousFrames: [string, string] = [seriousOpen, seriousAlternate]
 const standingFrames: [string, string] = [standingOpen, standingAlternate]
 
 export function MisProyectos() {
+  const projects = useProjects()
+  const museum = projects.get('museo')
+  const characters = projects.get('personajes')
+  const educa = projects.get('educa')
   const host = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(1)
   const reducedMotion = useReducedMotion()
@@ -85,13 +90,17 @@ export function MisProyectos() {
             <span className="project-category-circle" aria-hidden="true" />
             <span className="project-category-number" aria-hidden="true">01</span>
             <h3>DISEÑO/<br />DESARROLLO<br />WEB</h3>
-            <a className="mobile-only mobile-project-link" href="#museo" aria-label="Ver proyecto de diseño y desarrollo web" />
+            <a className="mobile-only mobile-project-link" href="#museo"
+              aria-label={museum ? `Ver proyecto ${museum.title}` : 'Ver proyecto de diseño y desarrollo web'}
+              aria-description={museum?.description} />
           </li>
           <li className="project-category project-category-characters">
             <span className="project-category-circle" aria-hidden="true" />
             <span className="project-category-number" aria-hidden="true">02</span>
             <h3>DISEÑO/<br />PERSONAJES<br />2D</h3>
-            <a className="mobile-only mobile-project-link" href="#personajes" aria-label="Ver proyecto de personajes 2D" />
+            <a className="mobile-only mobile-project-link" href="#personajes"
+              aria-label={characters ? `Ver proyecto ${characters.title}` : 'Ver proyecto de personajes 2D'}
+              aria-description={characters?.description} />
           </li>
           <li className="project-category project-category-branding" onAnimationEnd={event => {
             if (event.target === event.currentTarget && event.animationName === 'projects-enter') setEntrance('complete')
@@ -99,7 +108,9 @@ export function MisProyectos() {
             <span className="project-category-circle" aria-hidden="true" />
             <span className="project-category-number" aria-hidden="true">03</span>
             <h3>BRANDING</h3>
-            <a className="mobile-only mobile-project-link" href="#educa" aria-label="Ver proyecto de branding EDUCA" />
+            <a className="mobile-only mobile-project-link" href="#educa"
+              aria-label={educa ? `Ver proyecto ${educa.title}` : 'Ver proyecto de branding EDUCA'}
+              aria-description={educa?.description} />
           </li>
         </ol>
       </div>

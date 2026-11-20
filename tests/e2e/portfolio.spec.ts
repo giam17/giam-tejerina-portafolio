@@ -30,11 +30,16 @@ async function openStats(page: Page) {
   await expect(page.getByRole('table', { name: 'Actividad diaria' })).toBeVisible()
 }
 
-test('React muestra un título que cambió en PostgreSQL', async ({ page }) => {
+test('el enlace original usa el título de PostgreSQL y conserva la composición', async ({ page }) => {
   await api.db.query("update portfolio.projects set title = 'EDUCA para la defensa' where slug = 'educa'")
   await page.goto(url + '/?motion=off#proyectos')
-  const catalog = page.getByRole('region', { name: 'Catálogo de proyectos' })
-  await expect(catalog.getByRole('link', { name: 'EDUCA para la defensa' })).toHaveAttribute('href', '#educa')
+  await expect(page.locator('main > .projects-host + .museum-host')).toHaveCount(1)
+
+  await page.setViewportSize({ width: 390, height: 844 })
+  const project = page.locator('#proyectos').getByRole('link', { name: 'Ver proyecto EDUCA para la defensa' })
+  await expect(project).toHaveAttribute('href', '#educa')
+  await expect(project).toHaveAccessibleDescription('Identidad visual y branding con referencias a la arquitectura de Sucre.')
+  await expect(page.locator('#proyectos').getByRole('heading', { name: 'BRANDING' })).toBeVisible()
 })
 
 test('un clic real en WhatsApp incrementa el contador privado', async ({ page, context }) => {

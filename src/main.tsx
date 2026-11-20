@@ -19,7 +19,6 @@ import '@fontsource/manrope/latin-500.css'
 import { Portada } from './portada/Portada'
 import { SobreMi } from './sobre-mi/SobreMi'
 import { MisProyectos } from './mis-proyectos/MisProyectos'
-import { ProjectCatalog } from './mis-proyectos/ProjectCatalog'
 import { Museo } from './museo/Museo'
 import { Personajes } from './personajes/Personajes'
 import { Educa } from './educa/Educa'
@@ -39,7 +38,6 @@ function Portfolio() {
         <Portada />
         <SobreMi />
         <MisProyectos />
-        <ProjectCatalog />
         <Museo />
         <Personajes />
         <Educa />
