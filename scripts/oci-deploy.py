@@ -115,13 +115,20 @@ def pin_host():
     ip = ipaddress.IPv4Address(os.environ["PORTFOLIO_PUBLIC_IP"])
     marker = rb"PORTFOLIO_SSH_HOST_KEY\s+(ssh-ed25519 [a-zA-Z0-9+/=]+)"
     for _ in range(24):
-        history = COMPUTE.capture_console_history(
-            oci.core.models.CaptureConsoleHistoryDetails(instance_id=instance, display_name="portfolio-actions-host-key")
-        ).data
+        try:
+            history = COMPUTE.capture_console_history(
+                oci.core.models.CaptureConsoleHistoryDetails(instance_id=instance, display_name="portfolio-actions-host-key")
+            ).data
+        except oci.exceptions.ServiceError as error:
+            if error.status != 409:
+                raise
+            time.sleep(8)
+            continue
         try:
             oci.wait_until(COMPUTE, COMPUTE.get_console_history(history.id), "lifecycle_state", "SUCCEEDED", max_wait_seconds=45, max_interval_seconds=4)
-            data = COMPUTE.get_console_history_content(history.id).data
-            match = re.search(marker, data.content)
+            data = COMPUTE.get_console_history_content(history.id, length=1_048_576).data
+            contents = data if isinstance(data, bytes) else data.content
+            match = re.search(marker, contents)
             if match:
                 (TEMP / "portfolio_known_hosts").write_text(f"{ip} {match.group(1).decode()}\n", encoding="ascii")
                 print("Clave SSH de Ubuntu verificada desde la consola autenticada de OCI.")
