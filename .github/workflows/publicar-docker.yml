@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: publicar-y-desplegar-portafolio
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
@@ -51,3 +55,119 @@ jobs:
           DIGEST: ${{ steps.build.outputs.digest }}
           COMPONENT: ${{ matrix.component }}
         run: printf 'Imagen %s\n\nDigest `%s`\n' "$COMPONENT" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
+
+  desplegar:
+    name: Desplegar en Oracle Cloud con Terraform y Ansible
+    needs: publicar
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TF_IN_AUTOMATION: true
+      TF_INPUT: false
+      SUPPRESS_LABEL_WARNING: 'True'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.16.6
+          terraform_wrapper: false
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Preparar Ansible y el SDK de OCI
+        run: |
+          python -m pip install 'ansible-core==2.19.5' 'oci==2.190.0'
+          ansible-galaxy collection install -r infra/ansible/requirements.yml
+
+      - name: Configurar las credenciales de OCI y la llave SSH
+        env:
+          OCI_API_KEY_PEM: ${{ secrets.OCI_API_KEY_PEM }}
+          OCI_TENANCY: ${{ secrets.OCI_TENANCY_OCID }}
+          OCI_USER: ${{ secrets.OCI_USER_OCID }}
+          OCI_FINGERPRINT: ${{ secrets.OCI_FINGERPRINT }}
+          OCI_REGION: ${{ secrets.OCI_REGION }}
+          SSH_DEPLOY_KEY: ${{ secrets.OCI_DEPLOY_SSH_KEY }}
+        run: |
+          umask 077
+          test -n "$OCI_API_KEY_PEM" && test -n "$SSH_DEPLOY_KEY"
+          mkdir -p ~/.oci
+          printf '%s\n' "$OCI_API_KEY_PEM" > "$RUNNER_TEMP/portfolio-oci.pem"
+          printf '%s\n' "$SSH_DEPLOY_KEY" > "$RUNNER_TEMP/portfolio-ssh"
+          printf '[DEFAULT]\nuser=%s\ntenancy=%s\nfingerprint=%s\nregion=%s\nkey_file=%s\n' \
+            "$OCI_USER" "$OCI_TENANCY" "$OCI_FINGERPRINT" "$OCI_REGION" "$RUNNER_TEMP/portfolio-oci.pem" > ~/.oci/config
+          key="$(ssh-keygen -y -f "$RUNNER_TEMP/portfolio-ssh")"
+          printf 'TF_VAR_ssh_public_key=%s\n' "$key" >> "$GITHUB_ENV"
+
+      - name: Validar cuota y preparar el estado remoto de Terraform
+        env:
+          STATE_BUCKET: ${{ secrets.OCI_STATE_BUCKET }}
+          STATE_NAMESPACE: ${{ secrets.OCI_STATE_NAMESPACE }}
+        run: |
+          python scripts/oci-deploy.py check
+          terraform -chdir=infra/terraform init -input=false \
+            -backend-config="bucket=$STATE_BUCKET" -backend-config="namespace=$STATE_NAMESPACE" \
+            -backend-config="key=portafolio/terraform.tfstate"
+          terraform -chdir=infra/terraform validate
+
+      - name: Planificar y crear VCN, subredes y VM Ubuntu
+        env:
+          TF_VAR_tenancy_ocid: ${{ secrets.OCI_TENANCY_OCID }}
+          TF_VAR_ubuntu_2404_image_ocid: ${{ secrets.OCI_UBUNTU_IMAGE_OCID }}
+        run: |
+          terraform -chdir=infra/terraform plan -input=false -out="$RUNNER_TEMP/portfolio.tfplan"
+          terraform -chdir=infra/terraform show -json "$RUNNER_TEMP/portfolio.tfplan" | \
+            jq -e 'all(.resource_changes[]?; (.change.actions | index("delete")) == null)' >/dev/null
+          terraform -chdir=infra/terraform apply -input=false "$RUNNER_TEMP/portfolio.tfplan"
+          {
+            printf 'PORTFOLIO_PUBLIC_IP=%s\n' "$(terraform -chdir=infra/terraform output -raw public_ip)"
+            printf 'PORTFOLIO_INSTANCE_ID=%s\n' "$(terraform -chdir=infra/terraform output -raw instance_id)"
+            printf 'PORTFOLIO_SSH_NSG=%s\n' "$(terraform -chdir=infra/terraform output -raw ssh_nsg_id)"
+          } >> "$GITHUB_ENV"
+
+      - name: Aplicar migraciones pendientes de Supabase
+        env:
+          SUPABASE_MIGRATION_URL: ${{ secrets.SUPABASE_MIGRATION_URL }}
+          PGSSLROOTCERT: ${{ github.workspace }}/certs/supabase-ca.crt
+        run: |
+          test -n "$SUPABASE_MIGRATION_URL"
+          npx --yes supabase@3.2.0 db push --remote="$SUPABASE_MIGRATION_URL" --skip-vault --yes
+
+      - name: Autorizar SSH temporal y verificar la identidad de Ubuntu
+        run: |
+          python scripts/oci-deploy.py open-ssh
+          python scripts/oci-deploy.py pin-host
+
+      - name: Instalar servicios y desplegar con Ansible
+        env:
+          PORTFOLIO_IMAGE_TAG: ${{ github.sha }}
+          PORTFOLIO_DATABASE_URL: ${{ secrets.PORTFOLIO_DATABASE_URL }}
+          PORTFOLIO_STATS_PASSWORD: ${{ secrets.PORTFOLIO_STATS_PASSWORD }}
+        run: |
+          printf '[portfolio]\n%s ansible_user=ubuntu\n' "$PORTFOLIO_PUBLIC_IP" > "$RUNNER_TEMP/portfolio.inventory"
+          ansible-playbook -i "$RUNNER_TEMP/portfolio.inventory" --private-key "$RUNNER_TEMP/portfolio-ssh" \
+            --ssh-common-args="-o StrictHostKeyChecking=yes -o UserKnownHostsFile=$RUNNER_TEMP/portfolio_known_hosts" \
+            infra/ansible/deploy.yml
+
+      - name: Verificar el portafolio y publicar su URL
+        run: |
+          url="http://$PORTFOLIO_PUBLIC_IP"
+          curl --fail --silent --show-error --retry 5 --retry-all-errors --max-time 12 "$url/" | grep -q 'id="root"'
+          curl --fail --silent --show-error --retry 5 --retry-all-errors --max-time 12 "$url/api/projects" | jq -e 'length >= 1'
+          test "$(curl --silent --output /dev/null --write-out '%{http_code}' "$url/api/stats")" = 403
+          printf 'Portafolio en OCI: %s\n' "$url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Cerrar el acceso SSH temporal
+        if: always()
+        run: |
+          if test -f "$RUNNER_TEMP/portfolio-ssh-rule.json"; then
+            python scripts/oci-deploy.py close-ssh
+          fi

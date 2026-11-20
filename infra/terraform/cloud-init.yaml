@@ -1,0 +1,6 @@
+#cloud-config
+ssh_deletekeys: true
+ssh_genkeytypes: [ed25519, rsa]
+runcmd:
+  - [sh, -c, "printf 'PORTFOLIO_SSH_HOST_KEY '; cut -d ' ' -f 1,2 /etc/ssh/ssh_host_ed25519_key.pub"]
+  - [sh, -c, "(printf 'PORTFOLIO_SSH_HOST_KEY '; cut -d ' ' -f 1,2 /etc/ssh/ssh_host_ed25519_key.pub) > /dev/console"]

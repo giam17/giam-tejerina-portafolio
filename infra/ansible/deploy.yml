@@ -1,0 +1,170 @@
+---
+- name: Configurar Ubuntu y desplegar el portafolio
+  hosts: portfolio
+  become: true
+  gather_facts: false
+  vars:
+    app_dir: /opt/giam-portafolio
+    compose_env:
+      - "DATABASE_URL={{ lookup('ansible.builtin.env', 'PORTFOLIO_DATABASE_URL') }}"
+      - "STATS_ADMIN_PASSWORD={{ lookup('ansible.builtin.env', 'PORTFOLIO_STATS_PASSWORD') }}"
+      - "IMAGE_TAG={{ lookup('ansible.builtin.env', 'PORTFOLIO_IMAGE_TAG') }}"
+      - "PORTFOLIO_BIND_ADDRESS=127.0.0.1"
+      - "DATABASE_SSL=true"
+
+  pre_tasks:
+    - name: Esperar el acceso configurado por cloud-init
+      ansible.builtin.wait_for_connection:
+        timeout: 120
+    - name: Identificar la versión del sistema
+      ansible.builtin.setup:
+
+  tasks:
+    - name: Confirmar versión de Ubuntu y credenciales de ejecución
+      ansible.builtin.assert:
+        that:
+          - ansible_distribution == 'Ubuntu'
+          - ansible_distribution_version == '24.04'
+          - lookup('ansible.builtin.env', 'PORTFOLIO_DATABASE_URL') | length > 0
+          - lookup('ansible.builtin.env', 'PORTFOLIO_STATS_PASSWORD') | length > 0
+          - lookup('ansible.builtin.env', 'PORTFOLIO_IMAGE_TAG') is match('^[0-9a-f]{40}$')
+      no_log: true
+
+    - name: Instalar Git y utilidades del servidor
+      ansible.builtin.apt:
+        name: [ca-certificates, git, iptables, nginx, ufw]
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+        lock_timeout: 180
+
+    - name: Crear directorio de llaves de APT
+      ansible.builtin.file:
+        path: /etc/apt/keyrings
+        state: directory
+        mode: '0755'
+
+    - name: Instalar certificado de firma del repositorio de Docker
+      ansible.builtin.get_url:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        dest: /etc/apt/keyrings/docker.asc
+        mode: '0644'
+
+    - name: Agregar repositorio oficial de Docker
+      ansible.builtin.apt_repository:
+        repo: "deb [signed-by=/etc/apt/keyrings/docker.asc arch=amd64] https://download.docker.com/linux/ubuntu noble stable"
+        filename: docker
+        state: present
+        update_cache: true
+
+    - name: Instalar Docker y Compose
+      ansible.builtin.apt:
+        name: [docker-ce, docker-ce-cli, containerd.io, docker-compose-plugin]
+        state: present
+        lock_timeout: 180
+
+    - name: Habilitar Docker
+      ansible.builtin.systemd_service:
+        name: docker
+        enabled: true
+        state: started
+
+    - name: Permitir SSH y puertos web en UFW
+      community.general.ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      loop: ['22', '80', '443']
+
+    - name: Establecer política de entrada
+      community.general.ufw:
+        direction: incoming
+        policy: deny
+
+    - name: Activar firewall persistente basado en iptables
+      community.general.ufw:
+        state: enabled
+
+    - name: Verificar reglas iptables para HTTP y HTTPS
+      ansible.builtin.command: "iptables -C ufw-user-input -p tcp --dport {{ item }} -j ACCEPT"
+      loop: ['80', '443']
+      changed_when: false
+
+    - name: Crear directorio del portafolio
+      ansible.builtin.file:
+        path: "{{ app_dir }}"
+        state: directory
+        owner: root
+        group: root
+        mode: '0750'
+
+    - name: Instalar configuración de Compose
+      ansible.builtin.copy:
+        src: ../../compose.yaml
+        dest: "{{ app_dir }}/compose.yaml"
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Escribir configuración privada de ejecución
+      ansible.builtin.copy:
+        content: |
+          {% for setting in compose_env %}
+          {{ setting }}
+          {% endfor %}
+        dest: "{{ app_dir }}/.env"
+        owner: root
+        group: root
+        mode: '0600'
+      no_log: true
+
+    - name: Descargar y arrancar las imágenes del commit
+      ansible.builtin.command: docker compose up -d --no-build --pull always --wait --wait-timeout 180
+      args:
+        chdir: "{{ app_dir }}"
+      register: compose_result
+      changed_when: "'Recreated' in compose_result.stderr or 'Created' in compose_result.stderr or 'Started' in compose_result.stderr"
+
+    - name: Configurar HTTP público con el panel reservado para HTTPS
+      ansible.builtin.copy:
+        src: public-http.conf
+        dest: /etc/nginx/sites-available/default
+        owner: root
+        group: root
+        mode: '0644'
+      notify: Recargar Nginx
+
+    - name: Verificar la configuración de Nginx
+      ansible.builtin.command: nginx -t
+      changed_when: false
+
+    - name: Activar Nginx
+      ansible.builtin.systemd_service:
+        name: nginx
+        enabled: true
+        state: started
+
+    - name: Aplicar cambios de Nginx
+      ansible.builtin.meta: flush_handlers
+
+    - name: Comprobar el catálogo por el puerto público
+      ansible.builtin.uri:
+        url: http://127.0.0.1/api/projects
+        status_code: 200
+        return_content: true
+      register: catalog
+      retries: 5
+      delay: 3
+      until: catalog.status == 200
+      failed_when: catalog.status != 200 or catalog.json | length == 0
+
+    - name: Verificar que las estadísticas no se publican por HTTP
+      ansible.builtin.uri:
+        url: http://127.0.0.1/api/stats
+        status_code: 403
+
+  handlers:
+    - name: Recargar Nginx
+      ansible.builtin.systemd_service:
+        name: nginx
+        state: reloaded

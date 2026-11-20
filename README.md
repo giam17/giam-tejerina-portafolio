@@ -86,6 +86,16 @@ docker compose up -d --no-build --wait
 
 Los despliegues automáticos de Vercel están desactivados en vercel.json para concentrar el flujo en Docker Hub y OCI.
 
+## Despliegue en Oracle Cloud
+
+El workflow de `main` publica las dos imágenes, aplica el plan de Terraform y ejecuta Ansible. Terraform crea un compartimento, una VCN, subredes pública y privada, reglas de red y la VM Ubuntu 24.04 con IP pública. Usa la forma `VM.Standard.E2.1.Micro` en la región principal y guarda el estado en un bucket privado de OCI con bloqueo y versionado.
+
+Ansible instala Docker, Compose y Git, configura UFW sobre iptables, descarga las imágenes del mismo commit y deja Nginx al frente del portafolio. Los puertos de red previstos son `80` y `443`. El workflow autoriza SSH solo desde la IP del runner durante el trabajo, verifica la clave de host con la consola de OCI y retira la regla al finalizar.
+
+`SUPABASE_MIGRATION_URL` es la conexión del rol de migraciones. `PORTFOLIO_DATABASE_URL` y `PORTFOLIO_STATS_PASSWORD` son los valores de ejecución que se escriben en un `.env` privado de la VM. Las credenciales de OCI y las dos llaves privadas viven en GitHub Actions. El resumen de la ejecución muestra la URL pública después de verificar el catálogo.
+
+En esta fase se sirve el sitio público por HTTP. Las rutas de estadísticas de administrador quedan reservadas para HTTPS en la fase de dominio.
+
 ## Imágenes y organización
 
 `src/assets/` contiene únicamente los recursos de la web, con nombres descriptivos y carpetas por sección. Los separadores compartidos están en `src/assets/shared/` y las expresiones animadas en `src/assets/animations/`.

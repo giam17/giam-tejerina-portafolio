@@ -16,3 +16,10 @@ supabase/.temp/
 supabase/.branches/
 playwright-report/
 test-results/
+
+infra/terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+infra/terraform/*.auto.tfvars*
+infra/terraform/*.tfvars
